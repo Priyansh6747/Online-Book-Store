@@ -14,7 +14,7 @@ body{
 .wrapper{
     width: 420px;
     color: #fff;
-    background-color: aqua;
+    background-color: blue;
 }
 .wrapper h1{
     font-size: 36px;
