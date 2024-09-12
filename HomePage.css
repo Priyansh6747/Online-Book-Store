@@ -28,9 +28,9 @@ body{
     justify-content: space-between;
 }
 
-.navlink ul li:hover
+.navlink ul li a:hover
 {
-    color: white;
+    color: red;
 }
 
 .navlink ul li a{
