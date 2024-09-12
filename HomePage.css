@@ -19,8 +19,13 @@ body{
     width: 100%;
     height: 2.5rem;
 }
+.navlogo{
+    margin-right: 4rem;
+}
 .navlink{
     height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 .navlink ul li
 {
