@@ -27,11 +27,14 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.navlink ul li
+
+.navlink ul li:hover
 {
-    list-style-type: none;
+    color: white;
 }
+
 .navlink ul li a{
+    list-style-type: none;
     text-decoration: none;
     color: black;
     margin-top: 1.5rem;
