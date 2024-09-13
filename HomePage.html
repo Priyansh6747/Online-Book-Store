@@ -10,14 +10,12 @@
 </head>
 
 <body>
-    <section class="main">
-        <div class="navbar flex sticky">
-            <!-- /*here we will put some logo of our goup*/ -->
-            <div class="navlogo"><a href="">Bookstorepng</a></div>
-
-
+    <section class="main flex">
+        <nav class="navbar flex sticky">
+            <div class="navlogo">
+                <a href="#">Bookstorepng</a>
+            </div>
             <div class="navlink">
-
                 <ul class="flex">
                     <li><a href="#">Books</a></li>
                     <li><a href="#">Categories</a></li>
@@ -25,25 +23,39 @@
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
-
             <div class="search-bar">
-                <form action="">
-                    <input class=" search"type="text" value="searchbook" placeholder="Search book">
+                <form>
+                    <input class="search" type="text" placeholder="Search book">
                     <button type="submit">Go</button>
                     <button type="submit">Sign-in</button>
-                    
                 </form>
             </div>
-        </div>
+        </nav>
+
         <div class="left">
-            <h1><i class="fa-solid fa-book-open"></i>. Find Your Next Book</h1>
-            <p>Here you can find the most popular and trending book <br>Not sure what to read?</div></p>
+            <h1><i class="fa-solid fa-book-open"></i> Find Your Next Book</h1>
+            <p>Discover the most popular and trending books.<br>Not sure what to read?</p>
             <button class="explore">Explore Now</button>
         </div>
+
         <div class="right">
-
-        </div>
-
+            <div class="featured">
+                <div class="featured-img">
+                    <img src="/Featured Book images/the stranger.jpg" alt="The Stranger by Albert Camus">
+                    <a href="#" class="book-name">The Stranger</a>
+                    <p class="author">Albert Camus</p>
+                </div>
+                <div class="featured-img">
+                    <img src="/Featured Book images/The trial by franz koz.jpg" alt="The Trial by Franz Kafka">
+                    <a href="#" class="book-name">The Trial</a>
+                    <p class="author">Franz Kafka</p>
+                </div>
+                <div class="featured-img">
+                    <img src="/Featured Book images/the stranger.jpg" alt="The Stranger by Albert Camus">
+                    <a href="#" class="book-name">The Stranger</a>
+                    <p class="author">Albert Camus</p>
+                </div>
+            </div>
         </div>
     </section>
 </body>
