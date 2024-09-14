@@ -81,11 +81,18 @@ button:hover {
 }
 
 .left {
-    margin-right: 130px;
+    margin-right: 100px;
     margin-top: 200px;
+    margin-left: 100px;
     width: 30%;
+    position: relative;
 }
-
+.leftcontainer{
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%,-50%);
+}
 h1 {
     font-size: 4rem;
 }
@@ -101,9 +108,15 @@ h1 {
 
 .right {
     margin-top: 200px;
-    width: 30%;
+    width: 50%;
+    position: relative;
 }
-
+.rightcontent{
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%,-50%);
+}
 .featured {
     display: flex;
     gap: 30px;
