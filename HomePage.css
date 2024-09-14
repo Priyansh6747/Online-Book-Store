@@ -84,9 +84,9 @@ button:hover {
 }
 
 .left {
-    margin-right: 100px;
+    margin-right: 80px;
     margin-top: 200px;
-    margin-left: 100px;
+    margin-left: 170px;
     width: 30%;
     position: relative;
 }
@@ -124,14 +124,12 @@ h1 {
     display: flex;
     gap: 30px;
 }
-
 .featured-img img {
     width: 200px;
     height: auto;
     border-top-left-radius: 45%;
     border-top-right-radius: 45%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    object-fit: cover;
 }
 
 .featured-img p, .featured-img a {
