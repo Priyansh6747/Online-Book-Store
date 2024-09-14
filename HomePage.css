@@ -148,9 +148,9 @@ h1 {
     font-weight: 600;
 }
 
-.bestsellers-container {
-    display: flex;               
-    gap: 20px;                       
+.bestseller-container{
+    display: flex;
+    gap: 20px;      
 }
 
 .book-item {                       
@@ -168,11 +168,13 @@ h1 {
 .book-details{
     display: flex;
     flex-direction: row;
+    align-items: center;
     text-align: center;
+    padding: 6px;
 }
 
 .book-title{
-    padding: 8px 0px;
+    margin-right: 36px;
     font-size: 14px;
     font-weight: bold;
     display: flex;
@@ -181,7 +183,7 @@ h1 {
 }
 
 .price{
-    
+   
     font-family: 'Times New Roman', Times, serif ;
     display: flex;
     justify-content: space-between;
@@ -189,11 +191,13 @@ h1 {
 }
 
 .author{
+    padding: 2px 6px;
     font-size: 15px;
     margin: -2px 0px;
 }
 
 .rating i {
+    padding: 0px 6px;
     margin: 4px 0px; 
     color: #f5c518;
 }
