@@ -161,7 +161,8 @@ h1 {
     display: flex;
     justify-content: center;
     object-fit: contain ;
-    height: 50vh;
+    height: 56vh;
+    
     
 }
 
@@ -170,7 +171,10 @@ h1 {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    padding: 6px;
+    margin-top: 4px;
+    
+    
+    
 }
 
 .book-title{
@@ -188,16 +192,15 @@ h1 {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    
 }
 
 .author{
-    padding: 2px 6px;
     font-size: 15px;
-    margin: -2px 0px;
 }
 
 .rating i {
-    padding: 0px 6px;
+    
     margin: 4px 0px; 
     color: #f5c518;
 }
