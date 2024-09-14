@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -146,3 +149,72 @@ h1 {
 .featured-img a:hover {
     color: red;
 }
+
+
+.bestsellers-section {
+    margin: 50vh 11.5vw;    
+}
+
+.bestseller-text{
+    font-size: 50px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.bestseller-container{
+    display: flex;
+    gap: 20px;      
+}
+
+.book-item {                       
+    gap: 10px;                        
+}
+
+.book-image{
+    display: flex;
+    justify-content: center;
+    object-fit: contain ;
+    height: 56vh;
+    
+    
+}
+
+.book-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-top: 4px;
+    
+    
+    
+}
+
+.book-title{
+    margin-right: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+   
+    font-family: 'Times New Roman', Times, serif ;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    
+}
+
+.author{
+    font-size: 15px;
+}
+
+.rating i {
+    
+    margin: 4px 0px; 
+    color: #f5c518;
+}
+
