@@ -151,13 +151,21 @@ h1 {
 /*------------------------BESTSELLER SECTION---------------------------*/
 
 .bestsellers-section {
-    margin: 50vh 11.5vw;    
+    margin: 50vh 11.5vw 0vh 11.5vw;    
 }
 
 .bestseller-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 50px;
     margin-bottom: 16px;
     font-weight: 600;
+}
+
+.bestseller-text a{
+    font-size: 14px;
+    color: black;
 }
 
 .bestseller-container{
@@ -216,9 +224,34 @@ h1 {
     color: #f5c518;
 }
 
+.add-book-button{
+    border:none 0px 0px;
+    border-radius: 0px;
+    font-family: gilroy;
+    margin-top: 4px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    
+
+    background-color: black;
+    color: white;
+}
+
+.add-book-button p{
+    margin-right: 5px;
+}
+
+.add-to-cart-logo{
+    filter: invert();
+}
+
 /*------------------------OFFERS SECTION ----------------------------------*/
 .offersContainer{
-    margin: 50vh 11.5vw;
+    margin: 10vh 11.5vw;
     gap: 20px;
 }
 .offersContainer h2{
@@ -256,8 +289,10 @@ h1 {
 }
 
 .offersContainer .offer .offer-details p{
-    font-family: 'Roboto Light', sans-serif;
-    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 2px;
 }
 .offersContainer .offer .offer-details .btn{
     display: inline-block;
