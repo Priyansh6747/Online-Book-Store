@@ -151,7 +151,7 @@ h1 {
 /*------------------------BESTSELLER SECTION---------------------------*/
 
 .bestsellers-section {
-    margin: 50vh 11.5vw;    
+    margin: 50vh 11.5vw 0vh 11.5vw;    
 }
 
 .bestseller-text{
@@ -218,7 +218,7 @@ h1 {
 
 /*------------------------OFFERS SECTION ----------------------------------*/
 .offersContainer{
-    margin: 50vh 11.5vw;
+    margin: 10vh 11.5vw;
     gap: 20px;
 }
 .offersContainer h2{
@@ -255,8 +255,10 @@ h1 {
 }
 
 .offersContainer .offer .offer-details p{
-    font-family: 'Roboto Light', sans-serif;
-    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 2px;
 }
 .offersContainer .offer .offer-details .btn{
     display: inline-block;
