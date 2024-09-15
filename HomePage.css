@@ -155,9 +155,17 @@ h1 {
 }
 
 .bestseller-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 50px;
     margin-bottom: 16px;
     font-weight: 600;
+}
+
+.bestseller-text a{
+    font-size: 14px;
+    color: black;
 }
 
 .bestseller-container{
@@ -214,6 +222,31 @@ h1 {
     
     margin: 4px 0;
     color: #f5c518;
+}
+
+.add-book-button{
+    border:none 0px 0px;
+    border-radius: 0px;
+    font-family: gilroy;
+    margin-top: 4px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    
+
+    background-color: black;
+    color: white;
+}
+
+.add-book-button p{
+    margin-right: 5px;
+}
+
+.add-to-cart-logo{
+    filter: invert();
 }
 
 /*------------------------OFFERS SECTION ----------------------------------*/
