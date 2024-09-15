@@ -226,6 +226,7 @@ h1 {
     font-size: 50px;
     margin-bottom: 16px;
     font-weight: 600;
+    margin-left: 4%;
 }
 .img_box {
     display: flex;
