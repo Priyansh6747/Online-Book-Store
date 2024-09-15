@@ -92,8 +92,8 @@ button:hover {
 }
 .leftcontainer{
     position: absolute;
-    top: 50;
-    left: 50;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
 h1 {
@@ -116,10 +116,11 @@ h1 {
 }
 .rightcontent{
     position: absolute;
-    top: 50;
-    left: 50;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .featured {
     display: flex;
     gap: 30px;
@@ -147,7 +148,7 @@ h1 {
 .featured-img a:hover {
     color: red;
 }
-
+/*------------------------BESTSELLER SECTION---------------------------*/
 
 .bestsellers-section {
     margin: 50vh 11.5vw;    
@@ -173,7 +174,6 @@ h1 {
     justify-content: center;
     object-fit: contain ;
     height: 56vh;
-    
     
 }
 
@@ -212,7 +212,60 @@ h1 {
 
 .rating i {
     
-    margin: 4px 0px; 
+    margin: 4px 0;
     color: #f5c518;
 }
 
+/*------------------------OFFERS SECTION ----------------------------------*/
+.offersContainer{
+    margin: 50vh 11.5vw;
+    gap: 20px;
+}
+.offersContainer h2{
+    display: block;
+    font-size: 50px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+.img_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:16px;
+}
+
+.offersContainer .offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.offersContainer .offer img{
+    display: block;
+    object-fit: contain ;
+    height: 56vh;
+    border-radius: 0 0 45% 45%;
+}
+.offersContainer .offer #img_b{
+    border-radius: 45% 45% 0 0;
+}
+.offersContainer .offer .offer-details{
+    display: block;
+    text-align: center;
+}
+
+.offersContainer .offer .offer-details p{
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 24px;
+}
+.offersContainer .offer .offer-details .btn{
+    display: inline-block;
+    border-radius: 10px;
+    height:auto;
+    width: 50%;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+.offersContainer .offer .btn:hover{
+    transition: color 0.3s ease
+}
