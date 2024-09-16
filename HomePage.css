@@ -225,9 +225,9 @@ h1 {
 }
 
 .add-book-button{
-    border:none 0px 0px;
-    border-radius: 0px;
-    font-family: gilroy;
+    border:none;
+    border-radius: 0;
+    font-family: gilroy, serif;
     margin-top: 4px;
     width: 90px;
     height: 40px;
@@ -304,4 +304,57 @@ h1 {
 }
 .offersContainer .offer .btn:hover{
     transition: color 0.3s ease
+}
+
+/*-----------------------FOOTER-----------------------------*/
+.footer{
+    margin: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #fcfce4;
+}
+.footer_box{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+.footer_box p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+.footer_box a{
+    text-decoration: none;
+    margin-top: 2vh;
+    color: #000;
+    font-size: 16px;
+}
+.footer_box input{
+    margin: 2vh 0 1vh 0;
+    width: 100%;
+    height: 4vh;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    padding:0.5vh;
+    font-size: 13px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.footer_box button{
+    height: 4vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5vh;
+    font-size: 13px;
+    cursor: pointer;
+}
+.last{
+    display: block;
+    background: #fcfce4;
+    width: 100%;
+    text-align: center;
 }
