@@ -305,7 +305,39 @@ h1 {
 .offersContainer .offer .btn:hover{
     transition: color 0.3s ease
 }
-
+/*-----------------------Get To Know-----------------------------*/
+.Get_to_know{
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 11.5vw;
+    justify-content: center;
+}
+.Upperbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Upperbar a{
+    margin-top: 0.4vh;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.Upperbar p{
+    display: block;
+    font-size: 50px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    margin-left: 4%;
+}
+.ImagePlace{
+    display: flex;
+    flex-direction: row;
+}
+.ImagePlace img{
+    height : auto;
+    width:15%
+}
 /*-----------------------FOOTER-----------------------------*/
 .footer{
     margin: 10vh;
