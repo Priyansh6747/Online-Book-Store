@@ -108,8 +108,24 @@ h1 {
 }
 
 .explore {
-    margin-top: 10px;
+    border:none;
+    border-radius: 20px;
+    font-family: gilroy, serif;
+    margin-top: 15px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
 }
+.explore:hover{
+    background-color: white;
+    color: black;
+}
+
 
 .right {
     margin-top: 200px;
@@ -229,7 +245,9 @@ h1 {
 .author{
     font-size: 15px;
 }
-
+.rating{
+    margin-left: 4.5rem;
+}
 .rating i {
     
     margin: 4px 0;
@@ -238,19 +256,22 @@ h1 {
 
 .add-book-button{
     border:none;
-    border-radius: 0;
+    border-radius: 20px;
     font-family: gilroy, serif;
     margin-top: 4px;
+    margin-left: 5rem;
     width: 90px;
     height: 40px;
     display: flex;
     font-size: 14px;
     align-items: center;
     justify-content: center;
-    
-
     background-color: black;
     color: white;
+}
+.add-book-button:hover{
+    background-color: white;
+    color: black;
 }
 
 .add-book-button p{
@@ -316,6 +337,25 @@ h1 {
 }
 .offersContainer .offer .btn:hover{
     transition: color 0.3s ease
+}
+.btn{
+    border:none;
+    border-radius: 20px;
+    font-family: gilroy, serif;
+    margin-top: 4px;
+    margin-left: 1rem;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
 }
 /*-----------------------Get To Know-----------------------------*/
 .Get_to_know{
