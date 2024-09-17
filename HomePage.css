@@ -318,7 +318,7 @@ h1 {
     justify-content: space-between;
 }
 .Upperbar a{
-    margin-top: 0.4vh;
+    margin-top: 5vh;
     text-decoration: none;
     color: #000;
     font-size: 14px;
@@ -330,13 +330,27 @@ h1 {
     font-weight: 600;
     margin-left: 4%;
 }
+.backcolor{
+    position: absolute;
+    z-index: -1;
+    background: aquamarine;
+    width: 70%;
+    height: 35%;
+    margin-top:2%;
+    margin-left: 2%;
+}
 .ImagePlace{
     display: flex;
     flex-direction: row;
 }
 .ImagePlace img{
     height : auto;
-    width:15%
+    width:15%;
+    border-radius: 0 0 45% 45%;
+}
+.ImagePlace .nametext{
+    margin-left: 6vw;
+    text-align: justify;
 }
 /*-----------------------FOOTER-----------------------------*/
 .footer{
