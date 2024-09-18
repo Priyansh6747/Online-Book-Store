@@ -124,8 +124,7 @@ h1 {
 .explore:hover{
     background-color: white;
     color: black;
-    transition: color .3s ease;
-    transition: background-color .3s ease;
+    transition: color .3s ease, background-color .3s ease;
 }
 
 
@@ -271,8 +270,7 @@ h1 {
 .add-book-button:hover{
     background-color: white;
     color: black;
-    transition: color .3s ease;
-    transition: background-color .3s ease;
+    transition: color .3s ease, background-color .3s ease;
 }
 
 .add-book-button p{
@@ -355,8 +353,7 @@ h1 {
 .btn:hover{
     background-color: white;
     color: black;
-    transition: color .3s ease;
-    transition: background-color .4s ease;
+    transition: color .3s ease, background-color .4s ease;
 }
 /*-----------------------Get To Know-----------------------------*/
 .Get_to_know{
@@ -383,18 +380,17 @@ h1 {
     font-weight: 600;
     margin-left: 4%;
 }
-.backcolor{
-    position: absolute;
-    z-index: -1;
-    background: aquamarine;
-    width: 70%;
-    height: 35%;
-    margin-top:2%;
-    margin-left: 2%;
-}
 .ImagePlace{
     display: flex;
     flex-direction: row;
+    margin-left: 2.8vw;
+}
+.backcolor{
+    position: absolute;
+    z-index: -1;
+    background: black;
+    width: 70vw;
+    height: 35vh;
 }
 .ImagePlace img{
     height : auto;
@@ -402,9 +398,19 @@ h1 {
     border-radius: 0 0 45% 45%;
 }
 .ImagePlace .nametext{
-    margin-left: 6vw;
+    height: 99%;
+    margin-left: 2vw;
+    margin-bottom: 20px;
+    padding: 20px;
     text-align: justify;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.6;
+    border-left: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+
 }
+
 /*-----------------------FOOTER-----------------------------*/
 .footer{
     margin: 10vh;
