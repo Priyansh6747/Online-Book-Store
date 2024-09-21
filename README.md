@@ -13,7 +13,7 @@ To run this project locally, follow these steps:
     ```
     
 3. **Use the following SQL schema
-   '''sh
+   ```sh
         CREATE TABLE Book (
         B_id INT AUTO_INCREMENT PRIMARY KEY,
         Name VARCHAR(255) NOT NULL,
@@ -46,7 +46,7 @@ To run this project locally, follow these steps:
         FOREIGN KEY (UID) REFERENCES Customer(UID) ON DELETE CASCADE,
         FOREIGN KEY (B_id) REFERENCES Book(B_id) ON DELETE CASCADE
     );
-   '''
+   ```
 **.
    
 5. **Place the backend\OnlineBookStore in your XMAPP\htdocs**.
