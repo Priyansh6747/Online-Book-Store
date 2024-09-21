@@ -1,5 +1,4 @@
-﻿
-//validate form
+﻿//validate form
 function ValidateForm()
 {
     //variables with DOM
@@ -18,11 +17,11 @@ function ValidateForm()
         method: "POST",
         headers: {
             "Content-Type": "application/json",},
-        body: JSON.stringify({userdata}),
+        body: JSON.stringify(userdata),
     })
         .then(response => {
             if(!response.ok)
-                console.log(response.error);
+                throw new Error(`HTTP error! Status: ${response.status}`);
             else
                 return response.json();
         })
