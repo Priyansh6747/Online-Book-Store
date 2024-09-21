@@ -1,0 +1,102 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url("https://mobimg.b-cdn.net/v3/fetch/c5/c5b1810ebc9bd6aafa31c757b5efc687.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    width: 420px;
+    color: #fff;
+    background:transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;;
+}
+.wrapper .inputbox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.inputbox input{
+    width:100%;
+    height: 100%;
+    background: transparent;
+    border : none;
+    outline: none;
+    border: 2px solid rgba(139, 139, 139, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.inputbox input::placeholder{
+    color: #fff;
+}
+.inputbox i{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin : -15px 0 15px;
+}
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height : 45px;
+    background: #fff;
+    border : none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor : pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.wrapper .registerlink{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.wrapper .registerlink p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.wrapper .registerlink p a:hover{
+    text-decoration: underline;
+}
