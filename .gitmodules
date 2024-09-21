@@ -1,0 +1,3 @@
+[submodule "OnlineBookStore"]
+	path = OnlineBookStore
+	url = https://github.com/Priyansh6747/OnlineBookStore_BackEnd
