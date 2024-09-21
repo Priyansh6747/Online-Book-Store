@@ -11,8 +11,44 @@ To run this project locally, follow these steps:
     ```sh
     cd Online-Book-Store
     ```
-
-3. **Open `HomePage.html` in your preferred web browser**.
+    
+3. **Use the following SQL schema
+        CREATE TABLE Book (
+        B_id INT AUTO_INCREMENT PRIMARY KEY,
+        Name VARCHAR(255) NOT NULL,
+        URL VARCHAR(255),
+        Price DECIMAL(10, 2) DEFAULT 0.00,
+        Rating DECIMAL(3, 1) DEFAULT 0.0
+    );
+    
+    CREATE TABLE Author (
+        B_id INT,
+        Author_Name VARCHAR(255) NOT NULL,
+        Author_Bio TEXT,
+        PRIMARY KEY (B_id),
+        FOREIGN KEY (B_id) REFERENCES Book(B_id) ON DELETE CASCADE
+    );
+    
+    CREATE TABLE Customer (
+        UID INT AUTO_INCREMENT PRIMARY KEY,
+        Name VARCHAR(255) NOT NULL,
+        Username VARCHAR(255) NOT NULL UNIQUE,
+        Password VARCHAR(255) NOT NULL,
+        Email VARCHAR(255) UNIQUE
+    );
+    
+    CREATE TABLE Cart (
+        UID INT,
+        B_id INT,
+        Quantity INT DEFAULT 1,
+        PRIMARY KEY (UID, B_id),
+        FOREIGN KEY (UID) REFERENCES Customer(UID) ON DELETE CASCADE,
+        FOREIGN KEY (B_id) REFERENCES Book(B_id) ON DELETE CASCADE
+    );
+**.
+   
+5. **Place the backend\OnlineBookStore in your XMAPP\htdocs**.
+6. **Open `HomePage.html` in your preferred web browser**
 
 ## Usage
 
