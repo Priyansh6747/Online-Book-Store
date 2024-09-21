@@ -12,7 +12,7 @@ To run this project locally, follow these steps:
     cd Online-Book-Store
     ```
     
-3. **Use the following SQL schema
+3. Use the following SQL schema
    ```sh
         CREATE TABLE Book (
         B_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,8 +47,7 @@ To run this project locally, follow these steps:
         FOREIGN KEY (B_id) REFERENCES Book(B_id) ON DELETE CASCADE
     );
    ```
-**.
-   
+      
 5. **Place the backend\OnlineBookStore in your XMAPP\htdocs**.
 6. **Open `HomePage.html` in your preferred web browser**
 
