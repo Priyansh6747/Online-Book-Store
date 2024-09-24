@@ -27,7 +27,7 @@ function ValidateForm()
         })
         .then(data => {
             console.log(data);
-            window.location.href = "Login.html";
+            window.location.href = "../LoginPage/Login.html";
         })
         .catch(error => {
             console.log(error);

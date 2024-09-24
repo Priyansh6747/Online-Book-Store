@@ -27,7 +27,7 @@
                 <form>
                     <input class="search" type="text" placeholder="Search book">
                     <button type="submit">Go</button>
-                    <button type="submit">Sign-in</button>
+                    <button type="submit" id = "SignIn">Sign-in</button>
                 </form>
             </div>
         </nav>
@@ -65,10 +65,10 @@
     <section class="bestsellers-section">
         <div class="bestseller-text">
             <h4>Bestsellers</h4>
-            <a href="">See all</a>
+            <a href = "" id="BestSellerSeeAll">See all</a>
         </div>
         
-        <div class="bestseller-container">
+        <div class="bestseller-container" id="BestSellerContainer">
             <div class="book-item">
                 <img class="book-image" src="../Featured%20Book%20images/1.jpg" alt="">
                 <div class="book-details"> 
@@ -85,8 +85,7 @@
                     <i class="fa fa-star-half-alt"></i>
                 </div>
 
-                <button class="add-book-button">
-                    <p>Add</p>
+                <button class="add-book-button">Add
                     <i class="fa-solid fa-cart-plus"></i>
                 </button>
                 
@@ -162,7 +161,19 @@
                 </button>    
                 
             </div>
+            <div class="book-item template" style="display: none;">
+                <img class="book-image" src="../Featured%20Book%20images/1.jpg" alt="">
+                <div class="book-details">
+                    <p class="book-title" id="BookTitle">The Spoke Zarathustra</p>
+                    <p class="price" id ="BookPrice">$32.00</p>
+                </div>
+                <p class="author" id ="BookAuthor">by: Friedrich Nietzsche</p>
+                <button class="add-book-button">
+                    <p>Add</p>
+                    <i class="fa-solid fa-cart-plus"></i>
+                </button>
 
+            </div>
             
             
             
@@ -263,6 +274,7 @@
      <p>On.Book</p>
      <p>2024. All rights reserved Privacy Policy</p>
  </div>
+<script src="HomePage.js"></script>
 </body>
 
 </html>
