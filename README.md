@@ -48,8 +48,7 @@ To run this project locally, follow these steps:
     );
    ```
       
-5. **Place the backend\OnlineBookStore in your XMAPP\htdocs**.
-6. **Open `HomePage.html` in your preferred web browser**
+5. **Open `HomePage.html` in your preferred web browser**
 
 ## Usage
 
