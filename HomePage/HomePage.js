@@ -21,7 +21,6 @@ BSeeAllBtn.addEventListener("click", () =>{
                     return res.json();
             })
             .then(data => {
-                console.log(data);
                 data.forEach((item) => {
                     //BookItem div
                     let Book_item = document.createElement("div");
