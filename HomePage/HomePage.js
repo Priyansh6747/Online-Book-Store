@@ -39,17 +39,29 @@ BSeeAllBtn.addEventListener("click", () =>{
                     Name.classList.add("book-title");
                     book_details.appendChild(Name);
 
+                    //price div
                     let price = document.createElement("p");
-                    price.textContent = item.Price;
+                    price.textContent = "$"+item.Price;
                     price.classList.add("price");
                     book_details.appendChild(price);
-
                     Book_item.appendChild(book_details);
 
-                    let auther = document.createElement("p");
-                    auther.textContent = item.name;
-                    auther.classList.add("auther");
-                    Book_item.appendChild(auther);
+                    //book author para
+                    let author = document.createElement("p");
+                    author.textContent = item.name;
+                    author.classList.add("author");
+                    Book_item.appendChild(author);
+
+                    //Rating div
+                    let rating = document.createElement("div");
+                    rating.classList.add("rating");
+                    let i=1;
+                    for(; i<= item.Rating ; i++){
+                        let icon = document.createElement("i");
+                        icon.classList.add("fa","fa-star");
+                        rating.appendChild(icon);
+                    }
+                    Book_item.appendChild(rating);
 
                     let AddToCartBtn = document.createElement("button");
                     AddToCartBtn.textContent = "Add To Cart";
