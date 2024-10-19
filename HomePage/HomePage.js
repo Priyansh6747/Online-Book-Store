@@ -1,11 +1,16 @@
 ﻿//Navbar
 //Sign In redirect
 const SignInBtn =document.getElementById("SignIn");
-SignInBtn.addEventListener("click", () =>{
+SignInBtn.addEventListener("click", (e) =>{
     window.location.href = "../LoginPage/Login.html";
-    event.preventDefault();
+    e.preventDefault();
 })
-
+//search button
+document.querySelector("#Search").addEventListener("click", (e) =>{
+    e.preventDefault();
+    localStorage.setItem('SearchQ', document.getElementById("search_book").value);
+    window.location.href = "../SearchPage/Search.html";
+})
 //BestSeller
 const BSeeAllBtn =document.getElementById("BestSellerSeeAll");
 BSeeAllBtn.addEventListener("click", () =>{

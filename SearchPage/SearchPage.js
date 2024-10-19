@@ -1,5 +1,6 @@
 ﻿const urlParams = new URLSearchParams(window.location.search);
-const searchQuery = urlParams.get('q');
+const searchQuery = localStorage.getItem('SearchQ');
+console.log(searchQuery);
 fetch(`http://localhost/ONLINEBOOKSTORE/SearchBook.php?q=${encodeURIComponent(searchQuery)}`)
 .then(res => res.json())
 .then(data => {
