@@ -26,14 +26,16 @@ body {
 }
 
 .navbar {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
     width: 100%;
-    height: 4rem;
+    height: 6rem;
     background-color: #e4e1df;
-    box-shadow: 0 1px 3px grey;
+    box-shadow: 0 2px 5px grey;
 }
 
 .navlogo {
-    margin-right: 4rem;
+    margin-right: 6rem;
 }
 
 .navlink ul {
@@ -46,10 +48,10 @@ body {
     font-family: "Hind Siliguri", sans-serif;
     text-decoration: none;
     color: black;
-    margin-top: 1.5rem;
-    margin-right: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -65,16 +67,18 @@ body {
 }
 
 .search {
-    padding: 5px;
-    width: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    width: 300px;
     border: none;
     border-radius: 8px;
 }
 
 button {
-    border-radius: 8px;
-    padding: 5px;
-    margin-left: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 9px;
+    padding: 10px;
+    margin-left: 8px;
     border: 0.2px solid rgb(225, 213, 196);
     transition: color 0.3s ease;
 }
@@ -84,8 +88,8 @@ button:hover {
 }
 
 .left {
-    margin-right: 10px;
-    margin-top: 150px;
+    margin-right: 130px;
+    margin-top: 300px;
     margin-left: 170px;
     width: 40%;
     position: relative;
@@ -98,13 +102,14 @@ button:hover {
 }
 
 h1 {
-    font-size: 6rem;
-    line-height: 5.2rem;
+    font-size: 7rem;
+    line-height: 6.2rem;
 }
 
 .left p {
     margin-top: 20px;
-    line-height: 1.3rem;
+    font-size: 20px;
+    line-height: 1.4rem;
 }
 
 .explore {
@@ -115,7 +120,7 @@ h1 {
     width: 50%;
     height: 40px;
     display: flex;
-    font-size: 14px;
+    font-size: 24px;
     align-items: center;
     justify-content: center;
     background-color: black;
@@ -129,9 +134,9 @@ h1 {
 
 
 .right {
-    margin-top: 150px;
-    width: 80%;
-    margin-right: 100px;
+    margin-top: 300px;
+    width: 60%;
+    margin-right: 100px;    
 }
 .rightcontent{
     position: absolute;
@@ -329,7 +334,9 @@ h1 {
 
 .offersContainer .offer .offer-details p{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.3rem;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 2px;
 }
