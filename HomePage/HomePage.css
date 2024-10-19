@@ -204,10 +204,11 @@ h1 {
 }
 #BestSellerSeeAll {
     border: none;
+    margin-right: 140px;
     border-radius: 20px;
     font-family: gilroy, serif;
     background-color: transparent;
-    font-size: 14px;
+    font-size: 1.3rem;
     color: black;
 }
 
