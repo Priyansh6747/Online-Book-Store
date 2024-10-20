@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
     );
    ```
       
-4. **Paste the OnlineBookStore folder from the backend repo in your XMAPP/htdocs**
+4. **Paste the `OnlineBookStore` folder from the backend repo in your `XMAPP/htdocs`**
 
 6. **Open `HomePage.html` in your preferred web browser**
 
