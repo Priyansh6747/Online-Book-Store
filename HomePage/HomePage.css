@@ -73,6 +73,27 @@ body {
     border: none;
     border-radius: 8px;
 }
+.Account{
+    padding: 10px;
+    width: 300px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.Account p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-content: center;
+}
+.Account i{
+    padding-left: 15px;
+    color: black;
+    transition: ease-in-out 0.2s;
+}
+.Account i:hover{
+    color: #cfe5cf;
+    transition: ease-in-out 0.2s;
+}
 
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;

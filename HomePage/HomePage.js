@@ -1,5 +1,18 @@
 ﻿//Navbar
 //Sign In redirect
+let IsLoggedIn = false;
+if(localStorage.getItem("isLoggedIn") == "true") {
+    document.getElementById("UserAccount").style.display = "block";
+    document.getElementById("SignIn").style.display = "none";
+    localStorage.setItem("isLoggedIn", "true");
+    document.getElementById("AccountUserName").innerHTML = localStorage.getItem("username");
+}
+function logOut(){
+    IsLoggedIn = false;
+    localStorage.setItem("isLoggedIn","false");
+    console.log(localStorage.getItem("isLoggedIn"));
+    //window.location.reload();
+}
 const SignInBtn =document.getElementById("SignIn");
 SignInBtn.addEventListener("click", (e) =>{
     window.location.href = "../LoginPage/Login.html";
@@ -13,7 +26,7 @@ document.querySelector("#Search").addEventListener("click", (e) =>{
 })
 //BestSeller
 const BSeeAllBtn =document.getElementById("BestSellerSeeAll");
-BSeeAllBtn.addEventListener("click", () =>{
+BSeeAllBtn.addEventListener("click", (event) =>{
     event.preventDefault();
     if(BSeeAllBtn.textContent === "SeeAll"){
         //Getting variables

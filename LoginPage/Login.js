@@ -20,7 +20,11 @@ btn.addEventListener("click", (e) => {
         })
         .then(data => {
             console.log(data);
-            if(data.Password === PasswordInput) window.location.href = "../HomePage/HomePage.html";
+            if(data.Password === PasswordInput) {
+                window.localStorage.setItem("username", UserNameInput);
+                window.localStorage.setItem("isLoggedIn","true");
+                window.location.href = "../HomePage/HomePage.html";
+            }
             else alert("Username or Password incorrect.");
         })
         .catch(error => {
