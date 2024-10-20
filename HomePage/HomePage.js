@@ -11,7 +11,7 @@ function logOut(){
     IsLoggedIn = false;
     localStorage.setItem("isLoggedIn","false");
     console.log(localStorage.getItem("isLoggedIn"));
-    //window.location.reload();
+    window.location.reload();
 }
 const SignInBtn =document.getElementById("SignIn");
 SignInBtn.addEventListener("click", (e) =>{
