@@ -253,6 +253,7 @@ h1 {
 .book-details{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     margin-top: 4px;
@@ -425,7 +426,7 @@ h1 {
     position: absolute;
     z-index: -1;
     background: black;
-    width: 70vw;
+    width: 73.3vw;
     height: 35vh;
 }
 .ImagePlace img{

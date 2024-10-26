@@ -73,7 +73,7 @@ BSeeAllBtn.addEventListener("click", (event) =>{
 
                     //book author para
                     let author = document.createElement("p");
-                    author.textContent = item.name;
+                    author.textContent = "by: " + item.Author_Name;
                     author.classList.add("author");
                     Book_item.appendChild(author);
 
@@ -89,10 +89,10 @@ BSeeAllBtn.addEventListener("click", (event) =>{
                     Book_item.appendChild(rating);
 
                     let AddToCartBtn = document.createElement("button");
-                    AddToCartBtn.textContent = "Add To Cart";
+                    AddToCartBtn.textContent = "Add";
                     AddToCartBtn.classList.add("add-book-button");
                     let CartIcon = document.createElement("i");
-                    CartIcon.classList.add("fa-solid,fa-cart-plus");
+                    CartIcon.classList.add("fa-solid","fa-cart-plus");
                     AddToCartBtn.appendChild(CartIcon);
                     Book_item.appendChild(AddToCartBtn);
 
