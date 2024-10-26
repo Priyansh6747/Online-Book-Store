@@ -73,11 +73,22 @@ body{
 .remember-forgot a:hover{
     text-decoration: underline;
 }
-
+.return-back{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+.return-back a{
+    color: #fff;
+    text-decoration: none;
+}
+.return-back a:hover{
+    text-decoration: underline;
+}
 .wrapper .btn {
     width: 100%;
     height : 45px;
     background: #fff;
+    margin-top: 0px;
     border : none;
     outline: none;
     border-radius: 40px;
