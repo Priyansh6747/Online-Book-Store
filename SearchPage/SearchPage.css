@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFEA;
+     font-family:'Courier New', Courier, monospace;
+}
+h2{
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    border-bottom: solid 4px black  ;
+    max-width: 60%;
+}
