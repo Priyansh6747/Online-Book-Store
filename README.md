@@ -26,6 +26,7 @@ To run this project locally, follow these steps:
         B_id INT,
         Author_Name VARCHAR(255) NOT NULL,
         Author_Bio TEXT,
+        Image VARCHAR(255) NOT NULL,
         PRIMARY KEY (B_id),
         FOREIGN KEY (B_id) REFERENCES Book(B_id) ON DELETE CASCADE
     );
