@@ -11,6 +11,7 @@
 body {
     background-color: #FFFFEA;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 .flex {
@@ -111,7 +112,8 @@ button:hover {
 .left {
     margin-right: 130px;
     margin-top: 300px;
-    margin-left: 170px;
+    margin-left: 14vw;
+    margin-right: 14vw;
     width: 40%;
     position: relative;
 }
@@ -206,7 +208,7 @@ h1 {
 /*------------------------BESTSELLER SECTION---------------------------*/
 
 .bestsellers-section {
-    margin: 20vh 14vw;
+    margin: 26vh 14vw;
     width: 80vw;
 }
 
@@ -319,6 +321,7 @@ h1 {
 /*------------------------OFFERS SECTION ----------------------------------*/
 .offersContainer{
     margin: 10vh 11.5vw;
+    margin-right: 14vw;
     gap: 20px;
 }
 .offersContainer h2{

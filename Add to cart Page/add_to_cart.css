@@ -1,0 +1,128 @@
+/* Main Cart Container */
+.cart-container {
+    margin: 5vh 10vw;
+    width: 80vw;
+    font-family: Arial, sans-serif;
+}
+
+/* Cart Heading */
+.cart-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Cart Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Column Styling */
+.cart-table th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: bold;
+}
+
+.cart-table td {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Book Name Styling */
+.cart-table .book-name {
+    color: #0073e6; /* Blue link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-table .book-name:hover {
+    text-decoration: underline;
+}
+
+/* Old Price Strikethrough */
+.cart-table .old-price {
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+/* New Price */
+.cart-table .new-price {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Quantity and Total Amount Styling */
+.cart-table .quantity,
+.cart-table .total-amount {
+    font-weight: bold;
+}
+
+/* Book Image Styling */
+.book-image {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #e74c3c; /* Red color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Continue Shopping and Checkout Buttons */
+.cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.continue-shopping,
+.proceed-checkout {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.continue-shopping {
+    background-color: #f1c40f; /* Yellow color */
+}
+
+.continue-shopping:hover {
+    background-color: #d4ac0d;
+}
+
+.proceed-checkout {
+    background-color: #3498db; /* Blue color */
+}
+
+.proceed-checkout:hover {
+    background-color: #2980b9;
+}
