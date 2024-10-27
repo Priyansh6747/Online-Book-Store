@@ -24,10 +24,8 @@ b_form.addEventListener('submit', function (e) {
         })
         .then(result => {
             console.log(result);
-            alert('Book successfully added!');
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Failed to add the book due to some error. Please try again.'); 
         });
     })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,42 @@
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="/LoginPage/HomePage/HomePage.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h2>Admin Panel - Add New Book</h2>
-    <form action="add_book.php" method="post">
-        <!-- Book details -->
-        <label for="bookName">Book Name:</label>
-        <input type="text" id="bookName" name="bookName" required>
+    <div class="container">
+        <h2>Admin Panel - Add New Book</h2>
+        <form action="add_book.php" method="post">
+            <!-- Book details -->
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" required>
 
-        <label for="url">URL:</label>
-        <input type="text" id="url" name="url">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url">
 
-        <label for="price">Price:</label>
-        <input type="number" step="0.01" id="price" name="price" value="0.00" required>
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" id="price" name="price" value="0.00" required>
 
-        <label for="rating">Rating:</label>
-        <input type="number" step="0.1" id="rating" name="rating" value="0.0">
+            <label for="rating">Rating:</label>
+            <input type="number" step="0.1" id="rating" name="rating" value="0.0">
 
-        <!-- Author details -->
-        <h3>Author Information</h3>
-        <label for="authorName">Author Name:</label>
-        <input type="text" id="authorName" name="authorName" required>
+            <!-- Author details -->
+            <h3>Author Information</h3>
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" name="authorName" required>
 
-        <label for="authorBio">Author Bio:</label>
-        <textarea id="authorBio" name="authorBio" rows="4" placeholder="Write a short bio about the author..."></textarea>
+            <label for="authorBio">Author Bio:</label>
+            <textarea id="authorBio" name="authorBio" rows="4"
+                placeholder="Write a short bio about the author..."></textarea>
 
-        <input type="submit" value="Add Book">
-    </form>
-</div>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+    <div class="returning">
+        <a href="/LoginPage/LoginPage/Login.html">Return to Login Page</a>
+
+    </div>
 
 </body>
+
 </html>
