@@ -9,9 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:url("https://mobimg.b-cdn.net/v3/fetch/c5/c5b1810ebc9bd6aafa31c757b5efc687.jpeg");
     background-size: cover;
-    background-position: center;
+    background: url("https://mobimg.b-cdn.net/v3/fetch/c5/c5b1810ebc9bd6aafa31c757b5efc687.jpeg") center;
 }
 .wrapper{
     width: 420px;
@@ -38,7 +37,6 @@ body{
     width:100%;
     height: 100%;
     background: transparent;
-    border : none;
     outline: none;
     border: 2px solid rgba(139, 139, 139, 0.2);
     border-radius: 40px;
