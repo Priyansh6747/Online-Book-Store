@@ -109,6 +109,35 @@ button:hover {
     color: brown;
 }
 
+a {
+    position: relative; /* Ensure the badge stays within the bounds of the <a> element */
+}
+
+.fa-solid.fa-cart-shopping {
+    position: relative; /* Relative positioning for proper badge alignment */
+    font-size: 24px; /* Adjust icon size if necessary */
+}
+
+.cart-quantity {
+    display: flex;
+    font-family: Poppins;
+    font-weight: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: #cc0000;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    top: 12.5px; /* Adjust these values to position the badge over the icon */
+    right: -10px;
+}
+
+
+
 .left {
     margin-right: 130px;
     margin-top: 300px;
@@ -292,21 +321,23 @@ h1 {
 .add-book-button{
     border:none;
     border-radius: 20px;
-    font-family: gilroy, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 4px;
     margin-left: 3.5rem;
     width: 50%;
     height: 40px;
     display: flex;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
     background-color: black;
     color: white;
 }
 .add-book-button:hover{
-    background-color: white;
+    cursor: pointer;
     color: black;
+    background-color: #FFFFEA;
     transition: color .3s ease, background-color .3s ease;
 }
 

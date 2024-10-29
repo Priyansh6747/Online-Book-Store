@@ -1,38 +1,46 @@
-<div class="cart-container">
-    <h1 class="cart-heading">My Cart</h1>
-    <table class="cart-table">
-        <thead>
-            <tr>
-                <th>Book</th>
-                <th>Book Name</th>
-                <th>Book Price</th>
-                <th>Quantity</th>
-                <th>Total Amount</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="book-image1.jpg" alt="Book Image" class="book-image"></td>
-                <td><a href="#" class="book-name">The Midnight Library</a></td>
-                <td><span class="old-price">$700.00</span><span class="new-price">$660.00</span></td>
-                <td class="quantity">1</td>
-                <td class="total-amount">660</td>
-                <td><button class="delete-button">Delete</button></td>
-            </tr>
-            <tr>
-                <td><img src="book-image2.jpg" alt="Book Image" class="book-image"></td>
-                <td><a href="#" class="book-name">The Housemaid</a></td>
-                <td><span class="old-price">$900.00</span><span class="new-price">$800.00</span></td>
-                <td class="quantity">1</td>
-                <td class="total-amount">800</td>
-                <td><button class="delete-button">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cart-page">
+        <h1>Your Shopping Cart</h1>
 
-    <div class="cart-actions">
-        <button class="continue-shopping">Continue Shopping</button>
-        <button class="proceed-checkout">Proceed for Checkout</button>
+        <!-- Cart items list -->
+        <div class="cart-items-container">
+            <!-- Book Item 1 -->
+            <div class="cart-item">
+                <img src="path/to/book-cover1.jpg" alt="Book Cover">
+                <div class="item-details">
+                    <h3>Book Title</h3>
+                    <p>Author: Book Author</p>
+                    <p>Price: $20</p>
+                </div>
+                <div class="quantity-controls">
+                    <button onclick="decrementQuantity(1)">&#x2212;</button>
+                    <span id="quantity1">1</span>
+                    <button onclick="incrementQuantity(1)">&#x2b;</button>
+                </div>
+                <div class="item-total-price">
+                    <p>$20</p>
+                </div>
+                <button class="remove-button" onclick="removeItem(1)">Remove</button>
+            </div>
+
+            <!-- Repeat the .cart-item block for each book in the cart -->
+        </div>
+
+        <!-- Cart footer for totals and actions -->
+        <div class="cart-footer">
+            <p class="total-price">Total: $80</p>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
     </div>
-</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
