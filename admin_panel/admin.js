@@ -33,7 +33,6 @@ SubBtn.addEventListener('click', function (e) {
         .catch(error => {
             console.log('Error:', error);
         });
-    window.location.reload();
     })
 
 function DeleteBook(BookBID) {
