@@ -65,39 +65,76 @@ button{
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .login-button:hover {
     background-color: #155ab6;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
   }
 
-  .BookContainer{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-  }
-  .BookCard{
-      margin: 10px;
-      width: 100%;
-      height: 25vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-  }
-.BookCard .BookCardTitle{
-    /*Font family and stuff*/
-}
-.BookCard #DeleteBTN{
-    width: 5vw;
-    height: 5vh;
-    color: #f82b2b;
-    transition: ease-in-out 0.2s;
+.BookContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
-.BookCard #DeleteBTN:hover{
-    background-color: #b40000;
+.BookCard {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    border: 1px solid #ddd;
+}
+
+.BookCard img {
+    max-width: 100px;
+    max-height: 100px;
+    border-right: 1px solid #ddd;
+}
+
+.DeleteBTN {
+    width: 5vw;
+    height: 5vh;
+    background-color: #f54b4b;
+    transition: ease-in-out 0.2s;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.DeleteBTN:hover {
+    background-color: #fd7f7f;
+}
+.EditBTN {
+    width: 5vw;
+    height: 5vh;
+    background-color: #1de7e7;
+    transition: ease-in-out 0.2s;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.EditBTN:hover {
+    background-color: #adf3fd;
+}
+.AddButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+.AddBTN {
+    width: 5vw;
+    height: 5vh;
+    background-color: #1de720;
+    transition: ease-in-out 0.2s;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.AddBTN:hover {
+    background-color: #82ea86;
 }

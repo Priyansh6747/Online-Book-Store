@@ -3,7 +3,7 @@
 
 //Sign In redirect
 let IsLoggedIn = false;
-if (localStorage.getItem("isLoggedIn") == "true") {
+if (localStorage.getItem("isLoggedIn") === "true") {
     document.getElementById("UserAccount").style.display = "block";
     document.getElementById("SignIn").style.display = "none";
     localStorage.setItem("isLoggedIn", "true");

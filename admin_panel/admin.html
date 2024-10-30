@@ -10,9 +10,26 @@
 </head>
 
 <body>
+    <div class="SeeAllBooks">
+        <button id = "SAAB">See All Books</button>
+        <div id = "BookContainer">
+            <!-- Demo book for styling -->
+            <div class="BookCard">
+                <p id = "BID" class = "BookCardText">1</p>
+                <img src = "https://static01.nyt.com/images/2024/06/30/books/best-books-jjksd01sj-flat-slide-OQPJ/best-books-jjksd01sj-flat-slide-OQPJ-articleLarge.png" alt = "1"></img>
+                <p id = "BName" class = "BookCardText">When We Cease to Understand the World</p>
+                <p id = "BAuthor" class = "BookCardText">Benjamín Labatut</p>
+                <BUTTON class = "EditBTN">Edit</BUTTON>
+                <BUTTON class = "DeleteBTN">Delete</BUTTON>
+            </div>
+        </div>
+    </div>
+    <div class="AddButtonDiv">
+        <button id = "AddBook" class = "AddBTN">Add</button>
+    </div>
 
-    <div class="container">
-        <h2>Admin Panel - Add New Book</h2>
+    <div class="container" id="AddBookContainer">
+        <h2>Add New Book</h2>
         <form id = "BaseForm">
             <!-- Book details -->
             <label for="bookName">Book Name:</label>
@@ -34,7 +51,7 @@
 
             <label for="authorBio">Author Bio:</label>
             <textarea id="authorBio" name="authorBio" rows="4"
-                placeholder="Write a short bio about the author..."></textarea>
+                      placeholder="Write a short bio about the author..."></textarea>
 
             <label for="Author_URL">Author Image:</label>
             <input type="text" id="Author_URL" name="Author_URL" required>
@@ -42,22 +59,8 @@
             <button type="submit" id = "SubmitBTN">Add Book</button>
         </form>
     </div>
-    <div class="SeeAllBooks">
-        <button id = "SAAB">See All Books</button>
-        <div id = "BookContainer">
-            <!-- Demo book for styling -->
-            <div class="BookCard">
-                <p id = "BID" class = "BookCardText">1</p>
-                <img id = "BookImage" src = "https://static01.nyt.com/images/2024/06/30/books/best-books-jjksd01sj-flat-slide-OQPJ/best-books-jjksd01sj-flat-slide-OQPJ-articleLarge.png" alt = "1"></img>
-                <p id = "BName" class = "BookCardText">When We Cease to Understand the World</p>
-                <p id = "BAuthor" class = "BookCardText">Benjamín Labatut</p>
-                <BUTTON id = "DeleteBTN">Delete</BUTTON>
-            </div>
-        </div>
-    </div>
     <div class="returning">
         <a href="../LoginPage/Login.html">Return to Login Page</a>
-
     </div>
     <script src="admin.js"></script>
 </body>
