@@ -34,6 +34,21 @@ SubBtn.addEventListener('click', function (e) {
             console.log('Error:', error);
         });
     })
+
+function DeleteBook(BookBID) {
+    fetch("http://localhost/ONLINEBOOKSTORE/DeleteBook.php",{
+        method: "POST",headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({B_id:BookBID}),
+    })
+        .then(res =>{
+            if(!res.ok) throw new Error('HTTP error! Status: ' + res.status);
+            else return res.json();
+        })
+        .then(data =>{
+            console.log(data.message);
+        })
+}
+
 let i=1;
 let SeeAllBtn = document.getElementById("SAAB");
 let BookContainer = document.getElementById("BookContainer");
@@ -49,9 +64,7 @@ SeeAllBtn.addEventListener("click", function (e) {
             result.forEach((item) => {
                 let card = document.createElement("div");
                 card.classList.add("BookCard");
-                let BID = document.createElement("p");
-                BID.textContent = item.B_id;
-                card.appendChild(BID);
+                let BID = item.B_id
                 let img = document.createElement("img");
                 img.src = item.URL;
                 card.appendChild(img);
@@ -61,16 +74,21 @@ SeeAllBtn.addEventListener("click", function (e) {
                 let BAuthor = document.createElement("p");
                 BAuthor.textContent = item.Author_Name;
                 card.appendChild(BAuthor);
-                let editBTN = document.createElement("Button");
-                editBTN.textContent= "Edit";
-                editBTN.classList.add("EditBTN");
-                card.appendChild(editBTN);
-                //event listener
+                let rating = document.createElement("div");
+                rating.classList.add("rating");
+                for(let j=0; item.Rating - j >=1 ; j++){
+                    let star = document.createElement("i");
+                    star.classList.add("fa" ,"fa-star");
+                    rating.appendChild(star);
+                }
+                card.appendChild(rating);
                 let DeleteBTN = document.createElement("Button");
                 DeleteBTN.textContent= "Delete";
                 DeleteBTN.classList.add("DeleteBTN");
+                DeleteBTN.addEventListener("click", function (e) {
+                    DeleteBook(BID);
+                })
                 card.appendChild(DeleteBTN);
-                //event listener
                 BookContainer.appendChild(card);
             })
         })

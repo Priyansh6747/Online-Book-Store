@@ -13,6 +13,10 @@ function ValidateForm()
         alert("Passwords don't match");
         return false;
     }
+    if(Username === "admin"){
+        alert("Username can't be admin");
+        return false;
+    }
     fetch("http://localhost/OnlineBookStore/CreateUser.php", {
         method: "POST",
         headers: {
