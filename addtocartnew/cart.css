@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    max-width: 800px;
+    margin: 8rem 2rem;
+    padding: 20px;
+    background: #E9EED9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   
+     
+}
+
+.cart-items, .summary {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.summary {
+    max-width: 300px;
+    background: rgb(
+        219, 213, 216
+        );
+    padding: 20px;
+   
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-details {
+    flex-grow: 1;
+}
+
+.cart-details h4 {
+    margin: 5px 0;
+}
+
+.price, .quantity, .remove {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.subtotal {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.proceed-button {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.proceed-button:hover {
+    background-color: #ff8c00;
+}
+
+
+/* Styling for quantity buttons */
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: rgb(209, 145, 102);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #ff8c00;
+}
+
+.quantity input[type="text"] {
+    width: 30px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    margin: 0 5px;
+    background-color: #f4f4f4;
+}
+
+.remove button{
+    margin-left: 0px;
+}
+
