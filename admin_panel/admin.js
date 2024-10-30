@@ -33,7 +33,23 @@ SubBtn.addEventListener('click', function (e) {
         .catch(error => {
             console.log('Error:', error);
         });
+    window.location.reload();
     })
+
+function DeleteBook(BookBID) {
+    fetch("http://localhost/ONLINEBOOKSTORE/DeleteBook.php",{
+        method: "POST",headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({B_id:BookBID}),
+    })
+        .then(res =>{
+            if(!res.ok) throw new Error('HTTP error! Status: ' + res.status);
+            else return res.json();
+        })
+        .then(data =>{
+            console.log(data.message);
+        })
+}
+
 let i=1;
 let SeeAllBtn = document.getElementById("SAAB");
 let BookContainer = document.getElementById("BookContainer");
@@ -49,9 +65,7 @@ SeeAllBtn.addEventListener("click", function (e) {
             result.forEach((item) => {
                 let card = document.createElement("div");
                 card.classList.add("BookCard");
-                let BID = document.createElement("p");
-                BID.textContent = item.B_id;
-                card.appendChild(BID);
+                let BID = item.B_id
                 let img = document.createElement("img");
                 img.src = item.URL;
                 card.appendChild(img);
@@ -69,8 +83,10 @@ SeeAllBtn.addEventListener("click", function (e) {
                 let DeleteBTN = document.createElement("Button");
                 DeleteBTN.textContent= "Delete";
                 DeleteBTN.classList.add("DeleteBTN");
+                DeleteBTN.addEventListener("click", function (e) {
+                    DeleteBook(BID);
+                })
                 card.appendChild(DeleteBTN);
-                //event listener
                 BookContainer.appendChild(card);
             })
         })
