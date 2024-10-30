@@ -74,11 +74,14 @@ SeeAllBtn.addEventListener("click", function (e) {
                 let BAuthor = document.createElement("p");
                 BAuthor.textContent = item.Author_Name;
                 card.appendChild(BAuthor);
-                let editBTN = document.createElement("Button");
-                editBTN.textContent= "Edit";
-                editBTN.classList.add("EditBTN");
-                card.appendChild(editBTN);
-                //event listener
+                let rating = document.createElement("div");
+                rating.classList.add("rating");
+                for(let j=0; item.Rating - j >=1 ; j++){
+                    let star = document.createElement("i");
+                    star.classList.add("fa" ,"fa-star");
+                    rating.appendChild(star);
+                }
+                card.appendChild(rating);
                 let DeleteBTN = document.createElement("Button");
                 DeleteBTN.textContent= "Delete";
                 DeleteBTN.classList.add("DeleteBTN");
