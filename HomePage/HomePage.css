@@ -121,7 +121,7 @@ a {
 .cart-quantity {
     display: flex;
     font-family: Poppins;
-    font-weight: 400px;
+    font-weight: 400;
     justify-content: center;
     align-items: center;
     background-color: #cc0000;
@@ -129,7 +129,6 @@ a {
     width: 20px;
     height: 20px;
     font-size: 12px;
-    font-weight: bold;
     border-radius: 50%;
     position: absolute;
     top: 12.5px; /* Adjust these values to position the badge over the icon */
