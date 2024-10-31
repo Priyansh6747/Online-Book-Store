@@ -354,13 +354,23 @@ h1 {
     justify-content: center;
 }
 .ShowMoreButton #ShowMoreButton{
-    border-radius: 10px;
     background-color: #c0f8f0;
-    transition: ease-in-out 0.2s;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
 }
 .ShowMoreButton #ShowMoreButton:hover{
-    background-color: #f8f8f8;
-    transition: ease-in-out 0.2s;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+.ShowMoreButton #ShowMoreButton:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
 }
 /*------------------------OFFERS SECTION ----------------------------------*/
 .offersContainer{
