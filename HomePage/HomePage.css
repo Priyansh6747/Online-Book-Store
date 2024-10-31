@@ -348,10 +348,23 @@ h1 {
     filter: invert();
 }
 
+.ShowMoreButton{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.ShowMoreButton #ShowMoreButton{
+    border-radius: 10px;
+    background-color: #c0f8f0;
+    transition: ease-in-out 0.2s;
+}
+.ShowMoreButton #ShowMoreButton:hover{
+    background-color: #f8f8f8;
+    transition: ease-in-out 0.2s;
+}
 /*------------------------OFFERS SECTION ----------------------------------*/
 .offersContainer{
-    margin: 10vh 11.5vw;
-    margin-right: 14vw;
+    margin: 10vh 14vw 10vh 11.5vw;
     gap: 20px;
 }
 .offersContainer h2{
