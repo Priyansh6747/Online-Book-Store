@@ -33,6 +33,12 @@ SubBtn.addEventListener('click', function (e) {
         .catch(error => {
             console.log('Error:', error);
         });
+    SubBtn.style.display = "none";
+    const Loader = document.querySelector(".loadingBar");
+    Loader.style.display = "flex";
+    setTimeout(() => {
+        window.location.reload();
+    },3500)
     })
 
 function DeleteBook(BookBID) {
@@ -46,6 +52,9 @@ function DeleteBook(BookBID) {
         })
         .then(data =>{
             console.log(data.message);
+        })
+        .catch(error => {
+            console.log('Error:', error);
         })
 }
 
@@ -87,6 +96,10 @@ SeeAllBtn.addEventListener("click", function (e) {
                 DeleteBTN.classList.add("DeleteBTN");
                 DeleteBTN.addEventListener("click", function (e) {
                     DeleteBook(BID);
+                    DeleteBTN.textContent = "deleting..";
+                    setTimeout(()=>{
+                        window.location.reload();
+                    }, 3500);
                 })
                 card.appendChild(DeleteBTN);
                 BookContainer.appendChild(card);
