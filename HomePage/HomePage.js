@@ -16,7 +16,21 @@ function logOut() {
     console.log(localStorage.getItem("isLoggedIn"));
     window.location.reload();
 }
-
+function AddToCart(BookID,Quantity){
+    const BData = {UID:localStorage.getItem("UID"), BID:BookID,Quantity:Quantity};
+    console.log(BData);
+    fetch("http://localhost/ONLINEBOOKSTORE/AddToCart.php",{
+        method: "POST",
+        headers: {"Content-Type": "application/json",},
+        body: JSON.stringify(BData),
+    }).then(response => {
+        if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        else return response.json();
+    }).then(data => {
+        console.log(data);
+    })
+}
+AddToCart(1,22);
 const SignInBtn = document.getElementById("SignIn");
 SignInBtn.addEventListener("click", (e) => {
     window.location.href = "../LoginPage/Login.html";
@@ -31,7 +45,7 @@ document.querySelector("#Search").addEventListener("click", (e) => {
 })
 
 let CurrentDisplayedBook =0;
-//Add 4 books on page awake as non removable
+//Add 4 books on page awake as non-removable
 for(let i = 0; i < 4; i++){
     LoadBook(CurrentDisplayedBook,"NonRemovableBook");
     CurrentDisplayedBook++;
@@ -96,7 +110,10 @@ function LoadBook(CurrentNoOfBooks,Tag){
             let CartIcon = document.createElement("i");
             CartIcon.classList.add("fa-solid", "fa-cart-plus");
             AddToCartBtn.appendChild(CartIcon);
-            //event listner for add to cart
+            //event listener for add to cart
+            AddToCartBtn.addEventListener("click", (e) => {
+                //AddToCart(BookID)
+            })
             Book_item.appendChild(AddToCartBtn);
 
             Book_item.classList.add(Tag);

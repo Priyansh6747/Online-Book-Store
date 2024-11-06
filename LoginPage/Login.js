@@ -27,6 +27,7 @@ btn.addEventListener("click", (e) => {
                 console.log(data);
                 if (data.Password === PasswordInput) {
                     window.localStorage.setItem("username", UserNameInput);
+                    window.localStorage.setItem("UID",data.UID);
                     window.localStorage.setItem("isLoggedIn", "true");
                     window.location.href = "../HomePage/HomePage.html";
                 }
