@@ -30,9 +30,17 @@ function ValidateForm()
                 return response.json();
         })
         .then(data => {
-            window.location.href = "../LoginPage/Login.html";
+            setTimeout(()=>{
+                window.location.href = "../LoginPage/Login.html";
+            },1000);
         })
         .catch(error => {
             console.log(error);
         })
 }
+
+let SubmitBTN = document.getElementById("Submit");
+SubmitBTN.addEventListener("click", (event) => {
+    event.preventDefault();
+    ValidateForm();
+})

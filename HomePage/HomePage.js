@@ -110,7 +110,8 @@ function LoadBook(CurrentNoOfBooks,Tag){
             AddToCartBtn.appendChild(CartIcon);
             //event listener for add to cart
             AddToCartBtn.addEventListener("click", (e) => {
-                //AddToCart(BookID)
+                //Set Quantity
+                //AddToCart(BookID,Quantity)
             })
             Book_item.appendChild(AddToCartBtn);
 
