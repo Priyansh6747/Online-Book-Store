@@ -18,7 +18,6 @@ function logOut() {
 }
 function AddToCart(BookID,Quantity){
     const BData = {UID:localStorage.getItem("UID"), BID:BookID,Quantity:Quantity};
-    console.log(BData);
     fetch("http://localhost/ONLINEBOOKSTORE/AddToCart.php",{
         method: "POST",
         headers: {"Content-Type": "application/json",},
@@ -30,7 +29,6 @@ function AddToCart(BookID,Quantity){
         console.log(data);
     })
 }
-AddToCart(1,22);
 const SignInBtn = document.getElementById("SignIn");
 SignInBtn.addEventListener("click", (e) => {
     window.location.href = "../LoginPage/Login.html";
