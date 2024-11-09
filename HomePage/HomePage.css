@@ -26,6 +26,16 @@ body {
     z-index: 99;
 }
 
+.full-navbar{
+    
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .navbar {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
@@ -43,6 +53,7 @@ body {
     list-style: none;
     display: flex;
     margin-right: 400px;
+    
 }
 
 .navlink ul li a {
@@ -61,6 +72,8 @@ body {
     text-decoration: underline;
     transition: color 0.3s ease;
 }
+
+
 
 .search-bar {
     display: flex;
@@ -81,12 +94,15 @@ body {
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: center;
 }
 .Account p{
+    margin-left: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-content: center;
 }
 .Account i{
+    margin-left: 20px;
     padding-left: 15px;
     color: black;
     transition: ease-in-out 0.2s;
@@ -98,8 +114,11 @@ body {
 
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 9px;
-    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    justify-content: center;
+    align-items: center;
     margin-left: 8px;
     border: 0.2px solid rgb(225, 213, 196);
     transition: color 0.3s ease;
