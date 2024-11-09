@@ -141,7 +141,7 @@ a {
 }
 
 .cart-quantity {
-    display: flex;
+    display: none;
     font-family: Poppins;
     font-weight: 400;
     justify-content: center;
