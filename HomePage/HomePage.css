@@ -35,7 +35,6 @@ body {
     justify-content: center;
 }
 
-
 .navbar {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
@@ -99,13 +98,12 @@ body {
     justify-content: center;
 }
 .Account p{
-    margin-left: 10px;
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-content: center;
 }
 .Account i{
-    margin-left: 20px;
-    padding-left: 15px;
+    margin-left: 38px;
     color: black;
     transition: ease-in-out 0.2s;
 }
