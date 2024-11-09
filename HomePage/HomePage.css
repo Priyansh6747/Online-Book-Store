@@ -90,7 +90,7 @@ body {
 .Account{
     padding: 0;
     width: 100px;
-    margin-left: 300px;
+    margin-left: 0;
     border: none;
     display: flex;
     flex-direction: row;
