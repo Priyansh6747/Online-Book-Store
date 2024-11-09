@@ -102,13 +102,16 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-content: center;
 }
+.Account :hover{
+    color: brown;
+}
 .Account i{
     margin-left: 38px;
     color: black;
     transition: ease-in-out 0.2s;
 }
 .Account i:hover{
-    color: #cfe5cf;
+    color: brown;
     transition: ease-in-out 0.2s;
 }
 
