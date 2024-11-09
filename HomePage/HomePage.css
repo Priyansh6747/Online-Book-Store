@@ -78,6 +78,7 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
+    
 }
 
 .search {
@@ -88,8 +89,9 @@ body {
     border-radius: 8px;
 }
 .Account{
-    padding: 10px;
-    width: 300px;
+    padding: 0;
+    width: 100px;
+    margin-left: 300px;
     border: none;
     display: flex;
     flex-direction: row;
