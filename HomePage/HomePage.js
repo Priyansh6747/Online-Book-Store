@@ -16,12 +16,40 @@ function logOut() {
     console.log(localStorage.getItem("isLoggedIn"));
     window.location.reload();
 }
+//Functions to manage Cart
 function AddToCart(BookID,Quantity){
-    const BData = {UID:localStorage.getItem("UID"), BID:BookID,Quantity:Quantity};
+    const CData = {UID:localStorage.getItem("UID"), BID:BookID,Quantity:Quantity};
     fetch("http://localhost/ONLINEBOOKSTORE/AddToCart.php",{
         method: "POST",
-        headers: {"Content-Type": "application/json",},
-        body: JSON.stringify(BData),
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(CData),
+    }).then(response => {
+        if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        else return response.json();
+    }).then(data => {
+        console.log(data);
+    })
+}
+
+function DeleteFromCart(BookID){
+    const CData = {UID:localStorage.getItem("UID"), BID:BookID};
+    fetch("http://localhost/ONLINEBOOKSTORE/DeleteFromAddToCart.php",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(CData),
+    }).then(response => {
+        if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        else return response.json();
+    }).then(data => {
+        console.log(data);
+    })
+}
+function UpdateCart(BookID,change){
+    const CData = {UID:localStorage.getItem("UID"), BID:BookID , Quantity:change};
+    fetch("http://localhost/ONLINEBOOKSTORE/UpdateCart.php",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(CData)
     }).then(response => {
         if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         else return response.json();
