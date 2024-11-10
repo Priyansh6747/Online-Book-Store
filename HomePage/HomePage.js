@@ -44,8 +44,9 @@ function DeleteFromCart(BookID){
         console.log(data);
     })
 }
+//change can be +ve for addition and -ve for subtraction
 function UpdateCart(BookID,change){
-    const CData = {UID:localStorage.getItem("UID"), BID:BookID , Quantity:change};
+    const CData = {UID:localStorage.getItem("UID"), BID:BookID ,Quantity:change};
     fetch("http://localhost/ONLINEBOOKSTORE/UpdateCart.php",{
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -55,8 +56,12 @@ function UpdateCart(BookID,change){
         else return response.json();
     }).then(data => {
         console.log(data);
-    })
+    }).catch(error => {
+        console.error("Fetch error:", error);
+    });
 }
+
+
 const SignInBtn = document.getElementById("SignIn");
 SignInBtn.addEventListener("click", (e) => {
     window.location.href = "../LoginPage/Login.html";
