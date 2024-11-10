@@ -141,15 +141,52 @@ function LoadBook(CurrentNoOfBooks,Tag){
             let CartIcon = document.createElement("i");
             CartIcon.classList.add("fa-solid", "fa-cart-plus");
             AddToCartBtn.appendChild(CartIcon);
-            //event listener for add to cart
-            AddToCartBtn.addEventListener("click", (e) => {
-                //Set Quantity
-                //AddToCart(BookID,Quantity)
-            })
             Book_item.appendChild(AddToCartBtn);
+            let ModifyBookBtn = document.createElement("div");
+            ModifyBookBtn.classList.add("ModifyBook")
+            let plusBtn = document.createElement("button");
+            plusBtn.textContent = "+";
+            plusBtn.classList.add("Modify_button");
+            ModifyBookBtn.appendChild(plusBtn);
+            let Quantity = document.createElement("p");
+            Quantity.textContent = "1";
+            ModifyBookBtn.appendChild(Quantity);
+            let MinusBtn = document.createElement("button");
+            MinusBtn.textContent = "-";
+            MinusBtn.classList.add("Modify_button");
+            ModifyBookBtn.appendChild(MinusBtn);
+            ModifyBookBtn.style.display = "none";
+            Book_item.appendChild(ModifyBookBtn);
 
             Book_item.classList.add(Tag);
             mainContainer.appendChild(Book_item);
+
+            //event listener for add to cart
+            AddToCartBtn.addEventListener("click", (e) => {
+                AddToCart(item.B_id,1)
+                AddToCartBtn.style.display= "none";
+                ModifyBookBtn.style.display = "flex";
+            })
+
+            //event listener for ModifyBookBtn
+            plusBtn.addEventListener("click", () => {
+                let currentQuantity = parseInt(Quantity.textContent);
+                currentQuantity++;
+                Quantity.textContent = currentQuantity.toString();
+                UpdateCart(item.B_id,1);
+            })
+            MinusBtn.addEventListener("click", () => {
+                if(parseInt(Quantity.textContent) > 1){
+                    Quantity.textContent = (parseInt(Quantity.textContent) - 1).toString();
+                    UpdateCart(item.B_id,-1);
+                }
+                else{
+                    DeleteFromCart(item.B_id);
+                    ModifyBookBtn.style.display = "none";
+                    AddToCartBtn.style.display = "flex";
+                }
+            })
+            //page refresh cart gone
         })
         .catch(error => {
             console.log(error);
