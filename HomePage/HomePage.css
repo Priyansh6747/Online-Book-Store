@@ -70,6 +70,7 @@ body {
     color: brown;
     text-decoration: underline;
     transition: color 0.3s ease;
+    
 }
 
 
@@ -202,6 +203,8 @@ h1 {
     background-color: white;
     color: black;
     transition: color .3s ease, background-color .3s ease;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
 }
 
 
@@ -290,6 +293,8 @@ h1 {
     color: black;
     background-color: #FFFFEA;
     transition: color .3s ease, background-color .3s ease;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
 }
 
 .bestseller-container{
@@ -367,6 +372,8 @@ h1 {
     color: black;
     background-color: #FFFFEA;
     transition: color .3s ease, background-color .3s ease;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
 }
 
 .add-book-button p{
@@ -383,19 +390,22 @@ h1 {
     justify-content: center;
 }
 .ShowMoreButton #ShowMoreButton{
-    background-color: #f1ffdc;
-    font-family: inherit;
-    padding: 0.6em 1.3em;
-    font-weight: 900;
-    font-size: 18px;
-    border: 3px solid black;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em;
-    cursor: pointer;
+    border: none;
+    margin-right: 140px;
+    border-radius: 20px;
+    font-family: gilroy, serif;
+    background-color: transparent;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
 }
 .ShowMoreButton #ShowMoreButton:hover{
     transform: translate(-0.05em, -0.05em);
     box-shadow: 0.15em 0.15em;
+    cursor: pointer;
+    color: black;
+    background-color: #FFFFEA;
+    transition: color .3s ease, background-color .3s ease;
 }
 .ShowMoreButton #ShowMoreButton:active{
     transform: translate(0.05em, 0.05em);
