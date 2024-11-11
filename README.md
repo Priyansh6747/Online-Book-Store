@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
    (10, 'Fourth Wing', 'https://img1.od-cdn.com/ImageType-400/1694-1/%7B9A02D69C-6055-454B-93F2-74DC9B361AAF%7DIMG400.JPG', 18.00, 4.5),
    (11, 'Happy Place', 'https://th.bing.com/th/id/OIP.A_c8bCthT-pOcL22lmaY2QHaLZ?rs=1&pid=ImgDetMain', 14.00, 4.0),
    (12, 'Yellowface', 'https://th.bing.com/th/id/OIP.-8MZUu5ZVTdCohMfEwjw6wHaLR?rs=1&pid=ImgDetMain', 17.00, 3.8),
-   (13, 'The Berry Pickers', 'https://th.bing.com/th/id/R.1ba121a9b61e1c894e622091d5e03d94?rik=9SpYR0amDLazGw&riu=http%3a%2f%2fwww.booketybookbooks.co.nz%2fcdn%2fshop%2ffiles%2f9780241692448.jpg%3fv%3d1701738083&ehk=zsK2rqUIZJlofPo1pVsj4XdiOxkC%2fyW4JwuZ7O9cAds%3d&risl=&pid=ImgRaw&r=0', 13.00, 3.5),
+   (13, 'The Berry Pickers', 'https://m.media-amazon.com/images/I/913M9KQ+H0L._AC_UF350,350_QL50_.jpg', 13.00, 3.5),
    (14, 'Holly', 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781668016138/holly-9781668016138_hr.jpg', 18.00, 3.3),
    (16, 'The Fraud', 'https://th.bing.com/th/id/OIP.b4pQqomYwmBpvBd1JftJCgAAAA?rs=1&pid=ImgDetMain', 20.00, 3.0),
    (17, 'The Covenant of Water', 'https://www.easterneye.biz/wp-content/uploads/2023/05/Book-Review-The-Covenant-of-Water-11884.jpg', 19.00, 2.8),
