@@ -281,7 +281,15 @@ h1 {
     font-family: gilroy, serif;
     background-color: transparent;
     font-size: 1.3rem;
+    background-color: black;
+    color: white;
+}
+
+#BestSellerSeeAll:hover{
+    cursor: pointer;
     color: black;
+    background-color: #FFFFEA;
+    transition: color .3s ease, background-color .3s ease;
 }
 
 .bestseller-container{
