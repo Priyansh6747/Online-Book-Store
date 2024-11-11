@@ -1,6 +1,28 @@
-﻿//Navbar
-
-
+﻿//Global variables for cart
+const CartMap = new Map();
+let TotalQuantity = document.querySelector("#CartQuantity");
+function FetchCart(UID){
+    let Cdata = {uid:UID};
+    fetch("http://localhost/ONLINEBOOKSTORE/GetCart.php",{
+        method:"POST",
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify(Cdata),
+    }).then((response) => {
+        if(!response.ok) throw new Error('HTTP error! Status: ' + response.status);
+        else return response.json();
+    }).then(data=>{
+        data.forEach((item) => {
+            const BID = parseInt(item.B_id);
+            const Quantity = parseInt(item.Quantity);
+            CartMap.set(BID,Quantity);
+            TotalQuantity.textContent = (Quantity + parseInt(TotalQuantity.textContent)).toString();
+        })
+        console.log(CartMap);
+    }).catch(error => {
+        console.error("Error fetching cart:", error);
+    });
+}
+FetchCart(localStorage.getItem("UID"));
 //Sign In redirect
 let IsLoggedIn = false;
 if (localStorage.getItem("isLoggedIn") === "true") {
@@ -186,7 +208,12 @@ function LoadBook(CurrentNoOfBooks,Tag){
                     AddToCartBtn.style.display = "flex";
                 }
             })
-            //page refresh cart gone
+            if(CartMap.has(parseInt(item.B_id))){
+                console.log(CartMap.get(item.B_id));
+                AddToCartBtn.style.display= "none";
+                ModifyBookBtn.style.display = "flex";
+                Quantity.textContent = CartMap.get(item.B_id).toString();
+            }
         })
         .catch(error => {
             console.log(error);

@@ -140,8 +140,8 @@ a {
 }
 
 .cart-quantity {
-    display: none;
-    font-family: Poppins;
+    display: flex;
+    font-family: Poppins, sans-serif;
     font-weight: 400;
     justify-content: center;
     align-items: center;
