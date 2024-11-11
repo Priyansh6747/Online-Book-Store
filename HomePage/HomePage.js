@@ -167,17 +167,18 @@ function LoadBook(CurrentNoOfBooks,Tag){
             Book_item.appendChild(AddToCartBtn);
             let ModifyBookBtn = document.createElement("div");
             ModifyBookBtn.classList.add("ModifyBook")
-            let plusBtn = document.createElement("button");
-            plusBtn.textContent = "+";
-            plusBtn.classList.add("Modify_button");
-            ModifyBookBtn.appendChild(plusBtn);
-            let Quantity = document.createElement("p");
-            Quantity.textContent = "1";
-            ModifyBookBtn.appendChild(Quantity);
             let MinusBtn = document.createElement("button");
             MinusBtn.textContent = "-";
             MinusBtn.classList.add("Modify_button");
             ModifyBookBtn.appendChild(MinusBtn);
+           
+            let Quantity = document.createElement("p");
+            Quantity.textContent = "1";
+            ModifyBookBtn.appendChild(Quantity);
+            let plusBtn = document.createElement("button");
+            plusBtn.textContent = "+";
+            plusBtn.classList.add("Modify_button");
+            ModifyBookBtn.appendChild(plusBtn);
             ModifyBookBtn.style.display = "none";
             Book_item.appendChild(ModifyBookBtn);
 
