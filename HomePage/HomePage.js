@@ -1,6 +1,65 @@
 ﻿//Global variables for cart
 const CartMap = new Map();
 let TotalQuantity = document.querySelector("#CartQuantity");
+let IsLoggedIn = false;
+let CurrentDisplayedBook =0;
+
+//Awake function for everything that happens when page loads
+function HomePage() {
+    FetchCart(localStorage.getItem("UID"));
+
+    if (localStorage.getItem("isLoggedIn") === "true") {
+        document.getElementById("UserAccount").style.display = "block";
+        document.getElementById("SignIn").style.display = "none";
+        localStorage.setItem("isLoggedIn", "true");
+        document.getElementById("AccountUserName").innerHTML = localStorage.getItem("username");
+    }
+
+    const SignInBtn = document.getElementById("SignIn");
+    SignInBtn.addEventListener("click", (e) => {
+        window.location.href = "../LoginPage/Login.html";
+        e.preventDefault();
+    })
+
+
+
+    //Get To Know Section
+    let Author1 = document.getElementById("Author1");
+    let Author2 = document.getElementById("Author2");
+    let Author1Info = document.getElementById("AboutAuthor1");
+    let Author2Info = document.getElementById("AboutAuthor2");
+    let Auth1Img = document.getElementById("Author1Img");
+    let Auth2Img = document.getElementById("Author2Img");
+    function getRandomElements(arr) {
+        if (arr.length < 2) return [arr[0], arr[0]];
+        let index1 = Math.floor(Math.random() * arr.length);
+        let index2;
+        do index2 = Math.floor(Math.random() * arr.length); while (index2 === index1);
+        return [arr[index1], arr[index2]];
+    }
+    fetch("http://localhost/ONLINEBOOKSTORE/GetAuthors.php")
+        .then(res => {
+            if (!res.ok)
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            let random = getRandomElements(data);
+            let aut1 = random[0];
+            let aut2 = random[1];
+            Author1.textContent = aut1.Author_Name;
+            Author1Info.textContent = aut1.Author_Bio;
+            Auth1Img.src = aut1.Image;
+            Author2.textContent = aut2.Author_Name;
+            Author2Info.textContent = aut2.Author_Bio;
+            Auth2Img.src = aut2.Image;
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
+HomePage();
+
 function FetchCart(UID){
     let Cdata = {uid:UID};
     fetch("http://localhost/ONLINEBOOKSTORE/GetCart.php",{
@@ -17,20 +76,17 @@ function FetchCart(UID){
             CartMap.set(BID,Quantity);
             TotalQuantity.textContent = (Quantity + parseInt(TotalQuantity.textContent)).toString();
         })
-        console.log(CartMap);
+        //Add 4 books on page awake as non-removable
+        for(let i = 0; i < 4; i++){
+            LoadBook(CurrentDisplayedBook,"NonRemovableBook");
+            CurrentDisplayedBook++;
+        }
     }).catch(error => {
         console.error("Error fetching cart:", error);
     });
 }
-FetchCart(localStorage.getItem("UID"));
-//Sign In redirect
-let IsLoggedIn = false;
-if (localStorage.getItem("isLoggedIn") === "true") {
-    document.getElementById("UserAccount").style.display = "block";
-    document.getElementById("SignIn").style.display = "none";
-    localStorage.setItem("isLoggedIn", "true");
-    document.getElementById("AccountUserName").innerHTML = localStorage.getItem("username");
-}
+
+
 
 function logOut() {
     IsLoggedIn = false;
@@ -84,11 +140,7 @@ function UpdateCart(BookID,change){
 }
 
 
-const SignInBtn = document.getElementById("SignIn");
-SignInBtn.addEventListener("click", (e) => {
-    window.location.href = "../LoginPage/Login.html";
-    e.preventDefault();
-})
+
 
 //search button
 document.querySelector("#Search").addEventListener("click", (e) => {
@@ -97,13 +149,8 @@ document.querySelector("#Search").addEventListener("click", (e) => {
     window.location.href = "../SearchPage/Search.html";
 })
 
-let CurrentDisplayedBook =0;
-//Add 4 books on page awake as non-removable
-setTimeout(()=>{
-    for(let i = 0; i < 4; i++){
-    LoadBook(CurrentDisplayedBook,"NonRemovableBook");
-    CurrentDisplayedBook++;
-}},300)
+
+
 //BestSeller
 function LoadBook(CurrentNoOfBooks,Tag){
     let mainContainer = document.querySelector("#BestSellerContainer");
@@ -187,10 +234,14 @@ function LoadBook(CurrentNoOfBooks,Tag){
 
             //event listener for add to cart
             AddToCartBtn.addEventListener("click", (e) => {
-                AddToCart(item.B_id,1)
-                TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) + 1).toString()
-                AddToCartBtn.style.display= "none";
-                ModifyBookBtn.style.display = "flex";
+                if(localStorage.getItem("isLoggedIn") === "false")
+                    window.location.href = "../LoginPage/Login.html";
+                else{
+                    AddToCart(item.B_id,1)
+                    TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) + 1).toString()
+                    AddToCartBtn.style.display= "none";
+                    ModifyBookBtn.style.display = "flex";
+                }
             })
 
             //event listener for ModifyBookBtn
@@ -256,37 +307,3 @@ ShowMoreBTN.addEventListener("click", (event) => {
     }
 })
 
-//Get To Know Section
-let Author1 = document.getElementById("Author1");
-let Author2 = document.getElementById("Author2");
-let Author1Info = document.getElementById("AboutAuthor1");
-let Author2Info = document.getElementById("AboutAuthor2");
-let Auth1Img = document.getElementById("Author1Img");
-let Auth2Img = document.getElementById("Author2Img");
-function getRandomElements(arr) {
-    if (arr.length < 2) return [arr[0], arr[0]];
-    let index1 = Math.floor(Math.random() * arr.length);
-    let index2;
-    do index2 = Math.floor(Math.random() * arr.length); while (index2 === index1);
-    return [arr[index1], arr[index2]];
-}
-fetch("http://localhost/ONLINEBOOKSTORE/GetAuthors.php")
-    .then(res => {
-        if (!res.ok)
-            throw new Error(`HTTP error! Status: ${res.status}`);
-        return res.json();
-    })
-    .then(data => {
-        let random = getRandomElements(data);
-        let aut1 = random[0];
-        let aut2 = random[1];
-        Author1.textContent = aut1.Author_Name;
-        Author1Info.textContent = aut1.Author_Bio;
-        Auth1Img.src = aut1.Image;
-        Author2.textContent = aut2.Author_Name;
-        Author2Info.textContent = aut2.Author_Bio;
-        Auth2Img.src = aut2.Image;
-    })
-    .catch(error => {
-        console.log(error);
-    })

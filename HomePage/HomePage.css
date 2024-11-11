@@ -390,11 +390,11 @@ h1 {
     justify-content: center;
 }
 .ShowMoreButton #ShowMoreButton{
+    display: none;
     border: none;
     margin-right: 140px;
     border-radius: 20px;
     font-family: gilroy, serif;
-    background-color: transparent;
     font-size: 1.3rem;
     background-color: black;
     color: white;
