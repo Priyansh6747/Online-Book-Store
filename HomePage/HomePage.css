@@ -284,8 +284,8 @@ h1 {
     font-family: gilroy, serif;
     background-color: transparent;
     font-size: 1.3rem;
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
 }
 
 #BestSellerSeeAll:hover{
