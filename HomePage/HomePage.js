@@ -1,6 +1,28 @@
-﻿//Navbar
-
-
+﻿//Global variables for cart
+const CartMap = new Map();
+let TotalQuantity = document.querySelector("#CartQuantity");
+function FetchCart(UID){
+    let Cdata = {uid:UID};
+    fetch("http://localhost/ONLINEBOOKSTORE/GetCart.php",{
+        method:"POST",
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify(Cdata),
+    }).then((response) => {
+        if(!response.ok) throw new Error('HTTP error! Status: ' + response.status);
+        else return response.json();
+    }).then(data=>{
+        data.forEach((item) => {
+            const BID = parseInt(item.B_id);
+            const Quantity = parseInt(item.Quantity);
+            CartMap.set(BID,Quantity);
+            TotalQuantity.textContent = (Quantity + parseInt(TotalQuantity.textContent)).toString();
+        })
+        console.log(CartMap);
+    }).catch(error => {
+        console.error("Error fetching cart:", error);
+    });
+}
+FetchCart(localStorage.getItem("UID"));
 //Sign In redirect
 let IsLoggedIn = false;
 if (localStorage.getItem("isLoggedIn") === "true") {
@@ -77,10 +99,11 @@ document.querySelector("#Search").addEventListener("click", (e) => {
 
 let CurrentDisplayedBook =0;
 //Add 4 books on page awake as non-removable
-for(let i = 0; i < 4; i++){
+setTimeout(()=>{
+    for(let i = 0; i < 4; i++){
     LoadBook(CurrentDisplayedBook,"NonRemovableBook");
     CurrentDisplayedBook++;
-}
+}},300)
 //BestSeller
 function LoadBook(CurrentNoOfBooks,Tag){
     let mainContainer = document.querySelector("#BestSellerContainer");
@@ -164,6 +187,7 @@ function LoadBook(CurrentNoOfBooks,Tag){
             //event listener for add to cart
             AddToCartBtn.addEventListener("click", (e) => {
                 AddToCart(item.B_id,1)
+                TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) + 1).toString()
                 AddToCartBtn.style.display= "none";
                 ModifyBookBtn.style.display = "flex";
             })
@@ -174,6 +198,9 @@ function LoadBook(CurrentNoOfBooks,Tag){
                 currentQuantity++;
                 Quantity.textContent = currentQuantity.toString();
                 UpdateCart(item.B_id,1);
+                let CurrentQuantity = parseInt(TotalQuantity.textContent);
+                CurrentQuantity++;
+                TotalQuantity.textContent = CurrentQuantity.toString();
             })
             MinusBtn.addEventListener("click", () => {
                 if(parseInt(Quantity.textContent) > 1){
@@ -185,8 +212,14 @@ function LoadBook(CurrentNoOfBooks,Tag){
                     ModifyBookBtn.style.display = "none";
                     AddToCartBtn.style.display = "flex";
                 }
+                TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
             })
-            //page refresh cart gone
+            if(CartMap.has(parseInt(item.B_id))){
+                console.log(CartMap.get(item.B_id));
+                AddToCartBtn.style.display= "none";
+                ModifyBookBtn.style.display = "flex";
+                Quantity.textContent = CartMap.get(parseInt(item.B_id)).toString();
+            }
         })
         .catch(error => {
             console.log(error);
