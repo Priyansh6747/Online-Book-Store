@@ -14,10 +14,6 @@ body {
     
 }
 
-html {
-    scroll-behavior: smooth;
-  }
-
 .flex {
     display: flex;
     justify-content: center;
@@ -263,7 +259,7 @@ h1 {
 
 /*------------------------BESTSELLER SECTION---------------------------*/
 
-#bestsellers-section {
+.bestsellers-section {
     margin: 26vh 14vw;
     width: 80vw;
 }
@@ -515,7 +511,7 @@ h1 {
     transition: color .3s ease, background-color .4s ease;
 }
 /*-----------------------Get To Know-----------------------------*/
-#Get_to_know{
+.Get_to_know{
     display: flex;
     flex-direction: column;
     margin: 10vh 11.5vw;
