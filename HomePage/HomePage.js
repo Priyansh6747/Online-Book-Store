@@ -1,4 +1,6 @@
-﻿//Global variables for cart
+﻿document.addEventListener("DOMContentLoaded", () => {
+
+//Global variables for cart
 const CartMap = new Map();
 let TotalQuantity = document.querySelector("#CartQuantity");
 let IsLoggedIn = false;
@@ -308,3 +310,4 @@ ShowMoreBTN.addEventListener("click", (event) => {
     }
 })
 
+});
