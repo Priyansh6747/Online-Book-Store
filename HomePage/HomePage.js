@@ -6,6 +6,7 @@ let CurrentDisplayedBook =0;
 
 //Awake function for everything that happens when page loads
 function HomePage() {
+    //loading the cart based on individual user id  
     FetchCart(localStorage.getItem("UID"));
 
     if (localStorage.getItem("isLoggedIn") === "true") {
