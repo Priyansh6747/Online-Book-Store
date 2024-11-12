@@ -68,15 +68,19 @@ function FetchCart(UID){
     fetch("http://localhost/ONLINEBOOKSTORE/GetCart.php",{
         method:"POST",
         headers: {"content-type": "application/json"},
+        //most servers expect json string format data 
         body: JSON.stringify(Cdata),
     }).then((response) => {
         if(!response.ok) throw new Error('HTTP error! Status: ' + response.status);
+        //parsing the json object 
         else return response.json();
     }).then(data=>{
         data.forEach((item) => {
+            //parsing to int if the data is of any other datatype
             const BID = parseInt(item.B_id);
             const Quantity = parseInt(item.Quantity);
             CartMap.set(BID,Quantity);
+            //toString() converts the number to string because the text content can only read and alter string data 
             TotalQuantity.textContent = (Quantity + parseInt(TotalQuantity.textContent)).toString();
         })
         //Add 4 books on page awake as non-removable
