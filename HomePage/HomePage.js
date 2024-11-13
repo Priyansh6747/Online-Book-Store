@@ -88,13 +88,16 @@ function FetchCart(UID){
             LoadBook(CurrentDisplayedBook,"NonRemovableBook");
             CurrentDisplayedBook++;
         }
+
+        if(localStorage.getItem("isLoggedIn") === "false") TotalQuantity.textContent = "0";
     }).catch(error => {
         console.error("Error fetching cart:", error);
     });
 }
 
 
-
+let logout = document.getElementById("LogOut");
+logout.addEventListener("click", logOut)
 function logOut() {
     IsLoggedIn = false;
     localStorage.setItem("isLoggedIn", "false");
@@ -273,8 +276,7 @@ function LoadBook(CurrentNoOfBooks,Tag){
                 }
                 TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
             })
-            if(CartMap.has(parseInt(item.B_id))){
-                console.log(CartMap.get(item.B_id));
+            if(CartMap.size >0 && CartMap.has(parseInt(item.B_id))){
                 AddToCartBtn.style.display= "none";
                 ModifyBookBtn.style.display = "flex";
                 Quantity.textContent = CartMap.get(parseInt(item.B_id)).toString();
