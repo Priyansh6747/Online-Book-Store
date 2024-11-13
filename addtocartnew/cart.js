@@ -144,6 +144,14 @@ function CreateBook(Name,Price,URL,Quantity,bid){
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
+
+    removeButton.addEventListener("click", ()=>{
+        DeleteFromCart(bid);
+        CartItem.remove();
+        updateSubtotal(parseFloat(price) * (-1) * parseInt(quantity.value));
+        TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
+        TotalItems.textContent = TotalQuantity.textContent;
+    })
 }
 
 //Functions to manage Cart
