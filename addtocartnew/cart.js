@@ -18,7 +18,7 @@ function awake(){
         document.getElementById("SignIn").style.display = "none";
         localStorage.setItem("isLoggedIn", "true");
         document.getElementById("AccountUserName").innerHTML = localStorage.getItem("username");
-    }
+    }else window.location.href = "../LoginPage/Login.html";
     const SignInBtn = document.getElementById("SignIn");
     SignInBtn.addEventListener("click", (e) => {
         window.location.href = "../LoginPage/Login.html";

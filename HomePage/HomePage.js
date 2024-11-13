@@ -84,13 +84,16 @@ function FetchCart(UID){
             LoadBook(CurrentDisplayedBook,"NonRemovableBook");
             CurrentDisplayedBook++;
         }
+
+        if(localStorage.getItem("isLoggedIn") === "false") TotalQuantity.textContent = "0";
     }).catch(error => {
         console.error("Error fetching cart:", error);
     });
 }
 
 
-
+let logout = document.getElementById("LogOut");
+logout.addEventListener("click", logOut)
 function logOut() {
     IsLoggedIn = false;
     localStorage.setItem("isLoggedIn", "false");
