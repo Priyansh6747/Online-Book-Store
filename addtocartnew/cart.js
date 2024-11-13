@@ -149,7 +149,7 @@ function CreateBook(Name,Price,URL,Quantity,bid){
         DeleteFromCart(bid);
         CartItem.remove();
         updateSubtotal(parseFloat(price) * (-1) * parseInt(quantity.value));
-        TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
+        TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - parseInt(quantity.value)).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
 }
