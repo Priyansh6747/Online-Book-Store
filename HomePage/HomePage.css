@@ -40,7 +40,8 @@ html{
 
 .logo-container{
     height: 80%;
-    width: 80px;
+    width: 100px;
+    padding-left: 20px;
 }
 
 .booklogo{
@@ -61,7 +62,7 @@ html{
 }
 
 .navlogo {
-    margin-right: 6rem;
+    margin-right: 3rem;
 }
 
 .navlink ul {
