@@ -124,23 +124,22 @@ function CreateBook(Name,Price,URL,Quantity,bid){
     container.appendChild(CartItem);
 
     plusBtn.addEventListener("click", ()=>{
-        quantity.value  = (parseInt(quantity.value) +1).toString()
-        UpdateCart(bid,1);
-        updateSubtotal(parseFloat(price));
+        quantity.value  = (parseInt(quantity.value) + 1).toString();
+        UpdateCart(bid, 1);
+        updateSubtotal(parseFloat(Price));
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) + 1).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
 
     minusBtn.addEventListener("click", ()=>{
-        if(parseInt(quantity.value) > 1){
-            quantity.value  = (parseInt(quantity.value) -1).toString()
-            UpdateCart(bid,-1);
-        }
-        else{
+        if (parseInt(quantity.value) > 1) {
+            quantity.value  = (parseInt(quantity.value) - 1).toString();
+            UpdateCart(bid, -1);
+        } else {
             DeleteFromCart(bid);
             CartItem.remove();
         }
-        updateSubtotal(parseFloat(price) * (-1));
+        updateSubtotal(parseFloat(Price) * (-1));
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
@@ -148,7 +147,7 @@ function CreateBook(Name,Price,URL,Quantity,bid){
     removeButton.addEventListener("click", ()=>{
         DeleteFromCart(bid);
         CartItem.remove();
-        updateSubtotal(parseFloat(price) * (-1) * parseInt(quantity.value));
+        updateSubtotal(parseFloat(Price) * (-1) * parseInt(quantity.value));
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - parseInt(quantity.value)).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
