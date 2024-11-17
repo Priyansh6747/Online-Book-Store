@@ -68,7 +68,7 @@ html{
 .navlink ul {
     list-style: none;
     display: flex;
-    margin-right: 400px;
+    margin-right: 300px;
     
 }
 
@@ -98,13 +98,43 @@ html{
     
 }
 
-.search {
+/* .search {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 10px;
     width: 300px;
     border: none;
     border-radius: 8px;
-}
+} */
+
+
+.search {
+    width: 75%;
+    max-width: 400px; /* Limit maximum width */
+    padding: 10px 15px; /* Add padding inside the input */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 25px 25px 25px 25px; /* Rounded corners on the left side */
+    font-size: 16px; /* Set font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Styling the Go button */
+  #Search {
+    background-color: rgb(31, 117, 35); /* Green background */
+    color: white; /* White text */
+    border: 0px solid rgb(0, 53, 42); /* Matching border */
+    border-radius: 25px 25px 25px 25px; /* Rounded corners on the right */
+    padding: 10px 20px; /* Padding for a button-like feel */
+    font-size: 16px; /* Match font size with search bar */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  #Search:hover {
+    background-color: #47a; /* Darker green on hover */
+  }
+
+
 .Account{
     padding: 0;
     width: 100px;
