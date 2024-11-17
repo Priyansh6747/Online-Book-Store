@@ -316,4 +316,12 @@ ShowMoreBTN.addEventListener("click", (event) => {
     }
 })
 
+//Scroll to bestseller section on clicking on the explore more button
+document.getElementById('explore-now-btn').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    document.getElementById('bestsellers').scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start'     
+    });
+});
 });
