@@ -93,7 +93,7 @@ html{
 
 
 .search-bar {
-    display: flex;
+    display: flex; /*display set to flex*/
     align-items: center;
     
 }
