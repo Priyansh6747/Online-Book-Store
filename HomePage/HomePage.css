@@ -109,29 +109,45 @@ html{
 
 .search {
     width: 75%;
-    max-width: 400px; /* Limit maximum width */
-    padding: 10px 15px; /* Add padding inside the input */
-    border: 2px solid #ddd; /* Light border */
-    border-radius: 25px 25px 25px 25px; /* Rounded corners on the left side */
-    font-size: 16px; /* Set font size */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth transitions */
+    max-width: 400px; 
+    /* Limit maximum width */
+    padding: 10px 15px; 
+    /* Add padding inside the input */
+    border: 2px solid #ddd; 
+    /* Light border */
+    border-radius: 25px 25px 25px 25px; 
+    /* Rounded corners on the left side */
+    font-size: 16px; 
+    /* Set font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    /* Subtle shadow */
+    transition: all 0.3s ease; 
+    /* Smooth transitions */
   }
   
   /* Styling the Go button */
   #Search {
-    background-color: rgb(31, 117, 35); /* Green background */
-    color: white; /* White text */
-    border: 0px solid rgb(0, 53, 42); /* Matching border */
-    border-radius: 25px 25px 25px 25px; /* Rounded corners on the right */
-    padding: 10px 20px; /* Padding for a button-like feel */
-    font-size: 16px; /* Match font size with search bar */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    background-color: rgb(209, 209, 207); 
+    /* Green background */
+    color: rgb(0, 0, 0); 
+    /* White text */
+    border: 0px solid rgb(0, 53, 42); 
+    /* Matching border */
+    border-radius: 25px 25px 25px 25px; 
+    /* Rounded corners on the right */
+    padding: 10px 20px; 
+    /* Padding for a button-like feel */
+    font-size: 16px; 
+    /* Match font size with search bar */
+    cursor: pointer; 
+    /* Pointer on hover */
+    transition: background-color 0.3s ease; 
+    /* Smooth hover effect */
   }
   
   #Search:hover {
-    background-color: #47a; /* Darker green on hover */
+    background-color: rgb(223, 255, 220); 
+    /* Darker green on hover */
   }
 
 
@@ -179,12 +195,15 @@ button:hover {
 }
 
 a {
-    position: relative; /* Ensure the badge stays within the bounds of the <a> element */
+    position: relative; 
+    /* Ensure the badge stays within the bounds of the <a> element */
 }
 
 .fa-solid.fa-cart-shopping {
-    position: relative; /* Relative positioning for proper badge alignment */
-    font-size: 24px; /* Adjust icon size if necessary */
+    position: relative; 
+    /* Relative positioning for proper badge alignment */
+    font-size: 24px; 
+    /* Adjust icon size if necessary */
 }
 
 .cart-quantity {
@@ -200,7 +219,8 @@ a {
     font-size: 12px;
     border-radius: 50%;
     position: absolute;
-    top: 12.5px; /* Adjust these values to position the badge over the icon */
+    top: 12.5px; 
+    /* Adjust these values to position the badge over the icon */
     right: -10px;
 }
 
