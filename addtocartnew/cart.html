@@ -45,6 +45,10 @@
             <div class="cart-items" id = "CartContainer">
                 <h2>Shopping Cart</h2>
                 <br>
+                <div id="EmptyCart">
+                    <p>OOPS! Nothing To Show Here...</p>
+                </div>
+
                 <div class="cart-item" style = "display: none;">
                     <img src="../Featured Book images/1.jpg" alt="Product Image">
                     <div class="cart-details">
@@ -69,7 +73,7 @@
     <div class="summary">
         <h3>Summary</h3>
         <p class="subtotal">Subtotal (<span id = "TotalSubitems">0</span> items): $<span id = "Subtotal">0</span></p>
-        <button class="proceed-button">Proceed to Buy</button>
+        <button class="proceed-button" id = "BuyBtn">Proceed to Buy</button>
     </div>
 </section>
 
