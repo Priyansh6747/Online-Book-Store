@@ -3,7 +3,7 @@ const CartMap = new Map();
 let TotalQuantity = document.querySelector("#CartQuantity");
 let Subtotal = document.querySelector("#Subtotal");
 let TotalItems = document.querySelector("#TotalSubitems");
-
+let CurrentLoadedBooks = [];
 
 function updateSubtotal(change) {
     let CurrentQuantity = parseFloat(Subtotal.textContent) || 0;
@@ -31,8 +31,23 @@ function awake(){
         localStorage.setItem('SearchQ', document.getElementById("search_book").value);
         window.location.href = "../SearchPage/Search.html";
     })
-}awake();
 
+    //buy btn
+    let BuyBtn = document.getElementById("BuyBtn");
+    BuyBtn.addEventListener("click", (e) => {
+        BuyBtn.innerHTML = "Checking Inventories";
+        setTimeout(() => {
+            BuyBtn.innerHTML = "Order Placed";
+            setTimeout(() => {
+                EmptyCart();
+            }, 1000);
+        }, 1000);
+    });
+}awake();
+function DisplayEmptyCart(){
+    let EmptyCartdiv = document.querySelector("#EmptyCart");
+ if(CartMap.size > 0) EmptyCartdiv.style.display = "none";
+}
 function FetchCart(UID){
     let Cdata = {uid:UID};
     fetch("http://localhost/ONLINEBOOKSTORE/GetCart.php",{
@@ -52,7 +67,7 @@ function FetchCart(UID){
             LoadBook(BID,Quantity);
             TotalItems.textContent = TotalQuantity.textContent;
         })
-        console.log(CartMap);
+        DisplayEmptyCart();
     }).catch(error => {
         console.error("Error fetching cart:", error);
     });
@@ -80,6 +95,8 @@ function CreateBook(Name,Price,URL,Quantity,bid){
     let container = document.querySelector("#CartContainer");
     let CartItem = document.createElement("div")
     CartItem.classList.add("cart-item");
+
+    let BID = bid;
 
     let img = document.createElement("img");
     img.src = URL;
@@ -138,6 +155,8 @@ function CreateBook(Name,Price,URL,Quantity,bid){
         } else {
             DeleteFromCart(bid);
             CartItem.remove();
+            CartMap.delete(bid);
+            if(CartMap.size === 0)document.querySelector("#EmptyCart").style.display = "flex";
         }
         updateSubtotal(parseFloat(Price) * (-1));
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - 1).toString();
@@ -147,12 +166,26 @@ function CreateBook(Name,Price,URL,Quantity,bid){
     removeButton.addEventListener("click", ()=>{
         DeleteFromCart(bid);
         CartItem.remove();
+        CartMap.delete(bid);
+        if(CartMap.size === 0)document.querySelector("#EmptyCart").style.display = "flex";
         updateSubtotal(parseFloat(Price) * (-1) * parseInt(quantity.value));
         TotalQuantity.textContent = (parseInt(TotalQuantity.textContent) - parseInt(quantity.value)).toString();
         TotalItems.textContent = TotalQuantity.textContent;
     })
+    CurrentLoadedBooks.push({div:CartItem,BID:bid});
 }
 
+function EmptyCart(){
+    CartMap.clear();
+    TruncateCart();
+    CurrentLoadedBooks.forEach( (item) => {
+        item.div.remove();
+    })
+    Subtotal.textContent = "0";
+    TotalQuantity.textContent = "0";
+    TotalItems.textContent = TotalQuantity.textContent;
+    document.querySelector("#EmptyCart").style.display = "flex";
+}
 //Functions to manage Cart
 function DeleteFromCart(BookID){
     const CData = {UID:localStorage.getItem("UID"), BID:BookID};
@@ -182,4 +215,20 @@ function UpdateCart(BookID,change){
     }).catch(error => {
         console.error("Fetch error:", error);
     });
+}
+
+function TruncateCart(){
+    const CData = {UID:localStorage.getItem("UID")}
+    fetch("http://localhost/ONLINEBOOKSTORE/EmptyCart.php",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(CData),
+    })
+        .then(response => {
+            if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            else return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
 }
