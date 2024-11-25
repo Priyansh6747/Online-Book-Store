@@ -41,14 +41,14 @@ body {
     top: 0;
     padding: 0;
     margin: 0;
-    color: #C8B6FF;
+    color: #9c876a;
     animation: text_713 3.5s ease both infinite;
     font-size: .8rem;
     letter-spacing: 1px;
 }
 
 .load {
-    background-color: #9A79FF;
+    background-color: #9c876a;
     border-radius: 50px;
     display: block;
     height: 16px;
@@ -64,7 +64,7 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #D1C2FF;
+    background-color: #bfb89f;
     border-radius: inherit;
     animation: loading2_713 3.5s ease both infinite;
 }
