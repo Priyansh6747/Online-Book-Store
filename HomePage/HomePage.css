@@ -150,6 +150,9 @@ html{
     /* Darker green on hover */
   }
 
+.sign-in{
+    margin-left: 12px;
+}
 
 .Account{
     padding: 0;
@@ -631,6 +634,97 @@ h1 {
     border-left: 2px solid lightgray;
     border-bottom: 2px solid lightgray;
 
+}
+
+
+
+
+/*-----------------------ABOUT US----------------------------*/
+
+
+.about-us-section{
+    margin: 6vh 14vw;
+    width: 80vw;
+}
+
+.about-us-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.github {
+        
+}
+
+.github-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, #ff6f1c, #ff401f);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+
+    
+    max-width: 200px;
+    margin: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left:600px;
+    margin-top: 20px;
+}
+
+.github-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: 0.6s;
+}
+
+.github-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.github-button:hover::before {
+    left: 100%;
+}
+
+.intro-text{
+    font-size: 24px;
+    line-height: 20 px;
+    padding: 4px 76px 52px 0px;
+    text-align: justify;
+    justify-content: center;
+}
+
+.github-text {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    text-decoration:;
+    color: rgb(179, 86, 0);
+    font-weight: 700;
 }
 
 /*-----------------------FOOTER-----------------------------*/
