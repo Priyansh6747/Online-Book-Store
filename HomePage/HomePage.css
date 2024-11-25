@@ -150,6 +150,9 @@ html{
     /* Darker green on hover */
   }
 
+.sign-in{
+    margin-left: 12px;
+}
 
 .Account{
     padding: 0;
