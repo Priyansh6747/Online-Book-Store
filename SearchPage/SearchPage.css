@@ -20,3 +20,9 @@ body {
     font-size: 3rem;
     max-width: 60%;
 }
+
+.result-container{
+
+    margin: 2vh 14vw;
+    width: 80vw;
+}
