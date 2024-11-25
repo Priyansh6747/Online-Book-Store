@@ -14,38 +14,39 @@
   <!-- navbar section -->
   <nav class="navbar flex sticky">
     <div class="full-navbar">
-      <div class="navlogo">
-        <div class="logo-container"><img class="booklogo" src="../Featured Book images/newlogo.jpg" alt=""></div>
-      <div class="navlink">
-        <ul class="flex">
-          <li><a href="../HomePage/HomePage.html">Books</a></li>
-          <li><a href="../HomePage/HomePage.html">Offers</a></li>
-          <li>
-            <a href="../addtocartnew/cart.html">
-              Cart <i class="fa-solid fa-cart-shopping"></i>
-              <span class="cart-quantity" id = "CartQuantity">0</span>
-            </a>
-          </li>
-
-          <li><a href="#about-us">About Us</a></li>
-        </ul>
-      </div>
-      <div class="search-bar">
-        <form>
-          <input class="search" type="text" placeholder="Search book" id = "search_book">
-          <button type="submit" id = "Search">Go</button>
-          
-        </form>
-      </div>
-      <button class="sign-in" type="submit" id = "SignIn">Sign-in</button>
-      <div class = "Account" id="UserAccount" style="display: none;">
-        <i class="fa fa-user" style="font-size:24px"></i>
-        <p id ="AccountUserName">Account</p>
-        <button onclick="logOut()" id="LogOut">Logout</button>
-      </div>
+        <div class="navlogo">
+            <div class="logo-container"><img class="booklogo" src="../Featured Book images/newlogo.jpg" alt=""></div>
+        </div>
+        <div class="navlink">
+            <ul class="flex">
+                <li><a href="../HomePage/HomePage.html">Books</a></li>
+                <li><a href="../HomePage/HomePage.html">Offers</a></li>
+                <li>
+                    <a href="../addtocartnew/cart.html">
+                        Cart <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-quantity" id = "CartQuantity">0</span>
+                    </a>
+                </li>
+                
+                <li><a href="#about-us">About Us</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <form>
+                <input class="search" type="text" placeholder="Search book" id = "search_book">
+                <button type="submit" id = "Search">Go</button>
+                
+            </form>
+        </div>
+        <button class="sign-in" type="submit" id = "SignIn">Sign-in</button>
+        <div class = "Account" id="UserAccount" style="display: none;">
+            <i class="fa fa-user" style="font-size:24px"></i>
+            <p id ="AccountUserName">Account</p>
+            <button onclick="logOut()" id="LogOut">Logout</button>
+        </div>
 
     </div>
-  </nav>
+</nav>
   <div class="search-container">
     <h2>Search Result for : <span id="SearchQuery">Search</span></h2>
     <div class="searchbar">
